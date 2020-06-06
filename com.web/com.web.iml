@@ -54,5 +54,17 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="com.javalearn" />
+    <orderEntry type="module-library">
+      <library name="test">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/web/WEB-INF/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="web" level="project" />
   </component>
 </module>

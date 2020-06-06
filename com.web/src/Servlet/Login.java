@@ -3,6 +3,7 @@ package Servlet;
 import JDBCTools.JdbcTool;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,25 +21,16 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        DataSource factory = JdbcTool.getFactory();
-//        JdbcTemplate jdbcTemplate = new JdbcTemplate(JdbcTool.getFactory());
-        Connection connection = null;
-        PreparedStatement preparedStatement= null;
-        ResultSet resultSet= null;
-        var sql = "select * from user where username= ? and password = ?";
-        try {
-            connection = factory.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,username);
-            preparedStatement.setInt(2,Integer.parseInt(password));
-            resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
-                System.out.println("ok");
-            }else {
-                System.out.println("error");
-            }
-        } catch (SQLException e) {
-            JdbcTool.close(resultSet,preparedStatement,connection);
+        User loginUser = new User(username,Integer.parseInt(password));
+        User user1 = CheckUser.checkUser(loginUser);
+        System.out.println(user1+" 111");
+        if(user1!=null){
+            request.setAttribute("user",user1);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/success");
+            requestDispatcher.forward(request,response);
+        }else{
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/fail");
+            requestDispatcher.forward(request,response);
         }
 
     }
