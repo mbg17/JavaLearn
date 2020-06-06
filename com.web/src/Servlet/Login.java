@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
         Connection connection = null;
         PreparedStatement preparedStatement= null;
         ResultSet resultSet= null;
-        var sql = "select * from user where username=? and password = ?";
+        var sql = "select * from user where username= ? and password = ?";
         try {
             connection = factory.getConnection();
             preparedStatement = connection.prepareStatement(sql);
