@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User loginUser = new User(username,Integer.parseInt(password));
+        User loginUser = new User(username,password);
         User user1 = CheckUser.checkUser(loginUser);
         System.out.println(user1+" 111");
         if(user1!=null){

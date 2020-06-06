@@ -25,12 +25,12 @@ public class CheckUser {
 
 class User{
     private String username;
-    private Integer password;
+    private String password;
 
     public User() {
     }
 
-    public User(String username, Integer password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -43,11 +43,11 @@ class User{
         this.username = username;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
