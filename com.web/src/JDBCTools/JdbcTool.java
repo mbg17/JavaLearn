@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-
+@SuppressWarnings("all")
 public class JdbcTool {
     public static DataSource ds = null ;
 
@@ -18,7 +18,6 @@ public class JdbcTool {
             Properties properties = new Properties();
             properties.load(JdbcTool.class.getClassLoader().getResourceAsStream("druid.properties"));
             try {
-                System.out.println(properties.getProperty("url"));
                 ds = DruidDataSourceFactory.createDataSource(properties);
             } catch (Exception e) {
                 e.printStackTrace();

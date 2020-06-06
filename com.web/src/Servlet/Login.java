@@ -23,7 +23,6 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         User loginUser = new User(username,password);
         User user1 = CheckUser.checkUser(loginUser);
-        System.out.println(user1+" 111");
         if(user1!=null){
             request.setAttribute("user",user1);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/success");
