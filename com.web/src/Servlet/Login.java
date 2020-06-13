@@ -1,6 +1,7 @@
 package Servlet;
 
 import JDBCTools.JdbcTool;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.servlet.RequestDispatcher;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,9 +21,16 @@ import java.sql.SQLException;
 @WebServlet("/login")
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        User loginUser = new User(username,password);
+//        String username = request.getParameter("username");
+//        String password = request.getParameter("password");
+        User loginUser = new User();
+        try {
+            BeanUtils.populate(loginUser,request.getParameterMap());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
         User user1 = CheckUser.checkUser(loginUser);
         if(user1!=null){
             request.setAttribute("user",user1);
