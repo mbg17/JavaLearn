@@ -1,6 +1,5 @@
 package test.Servlet;
 
-import test.Domain.Student;
 import test.Service.Impl.UserListServiceImpl;
 import test.Service.UserListService;
 
@@ -10,18 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet("/userServlet")
-public class UserServlet extends HttpServlet {
+@WebServlet("/delSelectedServlet")
+public class DelSelectedServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserListService us = new UserListServiceImpl();
-        List<Student> students = us.findAll();
-        request.setAttribute("students",students);
-        request.getRequestDispatcher("/list.jsp").forward(request,response);
+        try{
+            String[] uids = request.getParameterValues("uid");
+            UserListService userListService = new UserListServiceImpl();
+            userListService.delSelected(uids);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            response.sendRedirect("/userServlet");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request, response);
+
     }
 }

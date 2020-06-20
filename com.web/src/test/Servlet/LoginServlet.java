@@ -1,8 +1,9 @@
-package Login;
+package test.Servlet;
 
 import Servlet.CheckUser;
 import Servlet.User;
 import org.apache.commons.beanutils.BeanUtils;
+import test.Service.Impl.UserListServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,24 +16,22 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet("/LoginServlet")
+@WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String code = request.getParameter("code");
-        Map<String, String> map = new HashMap<>();
-        map.put("username",username);
-        map.put("password",password);
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        String code = request.getParameter("verifycode");
+        String checkcode_server = (String) request.getSession().getAttribute("CHECKCODE_SERVER");
+        request.getSession().removeAttribute("CHECKCODE_SERVER");
         User user = new User();
         try {
-            if(code!=null && "aaaa".equalsIgnoreCase(code)){
-                BeanUtils.populate(user,map);
-                User user1 = CheckUser.checkUser(user);
+            if(code!=null && code.equalsIgnoreCase(checkcode_server)){
+                BeanUtils.populate(user,parameterMap);
+                User user1 = new UserListServiceImpl().login(user);
                 if(user1!=null){
                     request.setAttribute("user",user1.getUsername());
-                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/success.jsp");
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
                     requestDispatcher.forward(request,response);
                 }else{
                     request.setAttribute("errorMsg","用户名或密码错误");

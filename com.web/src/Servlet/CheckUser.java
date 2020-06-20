@@ -1,7 +1,6 @@
 package Servlet;
 
 import JDBCTools.JdbcTool;
-import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 @SuppressWarnings("all")

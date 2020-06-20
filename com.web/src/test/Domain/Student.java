@@ -1,6 +1,6 @@
 package test.Domain;
 
-public class User {
+public class Student {
     private int id;
     private String name;
     private int age;
@@ -11,7 +11,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +

@@ -36,34 +36,123 @@
 </head>
 <body>
 <div class="container">
-    <h3 style="text-align: center">用户信息列表</h3>
-    <table border="1" class="table table-bordered table-hover">
-        <tr class="success">
-            <th>编号</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>籍贯</th>
-            <th>QQ</th>
-            <th>邮箱</th>
-            <th>操作</th>
-        </tr>
-        <c:forEach items="${requestScope.students}" var="student" varStatus="s">
-            <tr>
-                <td>${s.count}</td>
-                <td>${student.name}</td>
-                <td>${student.gender}</td>
-                <td>${student.age}</td>
-                <td>${student.address}</td>
-                <td>${student.qq}</td>
-                <td>${student.email}</td>
-                <td><a class="btn btn-default btn-sm" href="update.html">修改</a>&nbsp;<a class="btn btn-default btn-sm" href="">删除</a></td>
+    <h3 style="text-align: center;padding-top: 80px;">用户信息列表</h3>
+    <div style="float: left;">
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">姓名</label>
+                <input type="text" class="form-control" id="exampleInputName2">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputName3">籍贯</label>
+                <input type="text" class="form-control" id="exampleInputName3">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail2">邮箱</label>
+                <input type="email" class="form-control" id="exampleInputEmail2">
+            </div>
+            <button type="submit" class="btn btn-default">查询</button>
+        </form>
+
+    </div>
+
+    <div style="float: right;margin: 5px;">
+
+        <a class="btn btn-primary" href="add.jsp">添加联系人</a>
+        <a class="btn btn-primary" id="delSelected" onclick="delSelected()">删除选中</a>
+
+    </div>
+    <form action="/delSelectedServlet" method="post" id="delList">
+        <table border="1" class="table table-bordered table-hover">
+            <tr class="success">
+                <th><input type="checkbox" id="selectedAll"></th>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>籍贯</th>
+                <th>QQ</th>
+                <th>邮箱</th>
+                <th>操作</th>
             </tr>
-        </c:forEach>
-        <tr>
-            <td colspan="8" align="center"><a class="btn btn-primary" href="add.html">添加联系人</a></td>
-        </tr>
-    </table>
+            <c:forEach items="${requestScope.students}" var="student" varStatus="s">
+                <tr>
+                    <td><input type="checkbox" name="uid" value="${student.id}"></td>
+                    <td>${s.count}</td>
+                    <td>${student.name}</td>
+                    <td>${student.gender}</td>
+                    <td>${student.age}</td>
+                    <td>${student.address}</td>
+                    <td>${student.qq}</td>
+                    <td>${student.email}</td>
+                    <td><a class="btn btn-default btn-sm" href="/findUserServlet?id=${student.id}">修改</a>&nbsp;
+                        <a class="btn btn-default btn-sm" id="del" onclick="delUser(${student.id})">删除</a></td>
+                </tr>
+            </c:forEach>
+            <tr>
+                <td colspan="9" align="center"><a class="btn btn-primary" href="add.jsp">添加联系人</a></td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <span style="font-size: 25px;margin-left: 5px;">
+                    共16条记录，共4页
+                </span>
+
+            </ul>
+        </nav>
+    </div>
+    <script>
+        function delUser(id) {
+            var b = confirm("是否真的要删除？");
+            if (b) {
+                location.href = "/delUserServlet?id=" + id;
+            }
+            return;
+        }
+        function delSelected() {
+            var b = confirm("是否真的要删除？");
+            var flag = false;
+            var elementsByName = document.getElementsByName("uid");
+            for (let i = 0; i < elementsByName.length; i++) {
+                if(elementsByName[i].checked){
+                    flag=true;
+                    break;
+                }
+            }
+            if (b && flag) {
+                document.getElementById("delList").submit();
+            }else{
+                alert("请勾选数据后删除");
+            }
+        }
+
+        document.getElementById("selectedAll").onclick = function () {
+            var elementsByName = document.getElementsByName("uid");
+            for (let i = 0; i < elementsByName.length; i++) {
+                elementsByName[i].checked=this.checked;
+            }
+        }
+    </script>
 </div>
 </body>
 </html>
