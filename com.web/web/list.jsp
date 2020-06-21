@@ -39,19 +39,19 @@
     <h3 style="text-align: center;padding-top: 80px;">用户信息列表</h3>
     <div style="float: left;">
 
-        <form class="form-inline">
+        <form class="form-inline" action="/userServlet" method="get">
             <div class="form-group">
                 <label for="exampleInputName2">姓名</label>
-                <input type="text" class="form-control" id="exampleInputName2">
+                <input type="text" name="name" class="form-control" id="exampleInputName2" value="${requestScope.parameterMap.name[0]}">
             </div>
             <div class="form-group">
                 <label for="exampleInputName3">籍贯</label>
-                <input type="text" class="form-control" id="exampleInputName3">
+                <input type="text" name="address" class="form-control" id="exampleInputName3" value="${requestScope.parameterMap.address[0]}">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail2">邮箱</label>
-                <input type="email" class="form-control" id="exampleInputEmail2">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail2" value="${requestScope.parameterMap.email[0]}">
             </div>
             <button type="submit" class="btn btn-default">查询</button>
         </form>
@@ -77,45 +77,72 @@
                 <th>邮箱</th>
                 <th>操作</th>
             </tr>
-            <c:forEach items="${requestScope.students}" var="student" varStatus="s">
+            <c:if test="${requestScope.PageBean.list!=null}">
+                <c:forEach items="${requestScope.PageBean.list}" var="student" varStatus="s">
+                    <tr>
+                        <td><input type="checkbox" name="uid" value="${student.id}"></td>
+                        <td>${s.count}</td>
+                        <td>${student.name}</td>
+                        <td>${student.gender}</td>
+                        <td>${student.age}</td>
+                        <td>${student.address}</td>
+                        <td>${student.qq}</td>
+                        <td>${student.email}</td>
+                        <td><a class="btn btn-default btn-sm" href="/findUserServlet?id=${student.id}">修改</a>&nbsp;
+                            <a class="btn btn-default btn-sm" id="del" onclick="delUser(${student.id})">删除</a></td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+            <c:if test="${requestScope.PageBean.list==null}">
                 <tr>
-                    <td><input type="checkbox" name="uid" value="${student.id}"></td>
-                    <td>${s.count}</td>
-                    <td>${student.name}</td>
-                    <td>${student.gender}</td>
-                    <td>${student.age}</td>
-                    <td>${student.address}</td>
-                    <td>${student.qq}</td>
-                    <td>${student.email}</td>
-                    <td><a class="btn btn-default btn-sm" href="/findUserServlet?id=${student.id}">修改</a>&nbsp;
-                        <a class="btn btn-default btn-sm" id="del" onclick="delUser(${student.id})">删除</a></td>
+                    <td colspan="9" align="center">没有更多数据</td>
                 </tr>
-            </c:forEach>
-            <tr>
-                <td colspan="9" align="center"><a class="btn btn-primary" href="add.jsp">添加联系人</a></td>
-            </tr>
+            </c:if>
         </table>
     </form>
     <div>
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
+                <li <c:if test="${requestScope.PageBean.currentPage==1}">class="disabled"</c:if>>
+                    <c:if test="${requestScope.PageBean.currentPage-1<=0}">
+                        <a href="/userServlet?currentPage=1&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </c:if>
+                    <c:if test="${requestScope.PageBean.currentPage-1>0}">
+                        <a href="/userServlet?currentPage=${requestScope.PageBean.currentPage-1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </c:if>
                 </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
+                <c:if test="${requestScope.PageBean.currentPage+6<requestScope.PageBean.totalPages}">
+                    <c:forEach begin="${requestScope.PageBean.currentPage}" end="${requestScope.PageBean.currentPage+6}"
+                               var="page" step="1">
+                        <li <c:if test="${requestScope.PageBean.currentPage==page}">class="active"</c:if>><a
+                                href="/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
+                    </c:forEach>
+                </c:if>
+                <c:if test="${requestScope.PageBean.currentPage+6>=requestScope.PageBean.totalPages}">
+                    <c:forEach begin="${requestScope.PageBean.totalPages-6}" end="${requestScope.PageBean.totalPages}" var="page" step="1">
+                        <li <c:if test="${requestScope.PageBean.currentPage==page}">class="active"</c:if>><a
+                                href="/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
+                    </c:forEach>
+                </c:if>
+                <li
+                        <c:if test="${requestScope.PageBean.currentPage==requestScope.PageBean.totalPages}">class="disabled"</c:if>>
+                    <c:if test="${requestScope.PageBean.currentPage+1>requestScope.PageBean.totalPages}">
+                        <a href="/userServlet?currentPage=${requestScope.PageBean.totalPages}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </c:if>
+                    <c:if test="${requestScope.PageBean.currentPage+1<=requestScope.PageBean.totalPages}">
+                        <a href="/userServlet?currentPage=${requestScope.PageBean.currentPage+1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </c:if>
                 </li>
                 <span style="font-size: 25px;margin-left: 5px;">
-                    共16条记录，共4页
+                    共${requestScope.PageBean.totalCount}条记录，共${requestScope.PageBean.totalPages}页
                 </span>
 
             </ul>
@@ -129,19 +156,20 @@
             }
             return;
         }
+
         function delSelected() {
             var b = confirm("是否真的要删除？");
             var flag = false;
             var elementsByName = document.getElementsByName("uid");
             for (let i = 0; i < elementsByName.length; i++) {
-                if(elementsByName[i].checked){
-                    flag=true;
+                if (elementsByName[i].checked) {
+                    flag = true;
                     break;
                 }
             }
             if (b && flag) {
                 document.getElementById("delList").submit();
-            }else{
+            } else {
                 alert("请勾选数据后删除");
             }
         }
@@ -149,7 +177,7 @@
         document.getElementById("selectedAll").onclick = function () {
             var elementsByName = document.getElementsByName("uid");
             for (let i = 0; i < elementsByName.length; i++) {
-                elementsByName[i].checked=this.checked;
+                elementsByName[i].checked = this.checked;
             }
         }
     </script>

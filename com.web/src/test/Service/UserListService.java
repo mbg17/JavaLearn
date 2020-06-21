@@ -1,9 +1,11 @@
 package test.Service;
 
 import Servlet.User;
+import test.Domain.PageBean;
 import test.Domain.Student;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserListService {
     public List<Student> findAll();
@@ -19,4 +21,6 @@ public interface UserListService {
     void update(Student student);
 
     void delSelected(String[] uids);
+
+    PageBean<Student> findByPageNumber(String currentPage, Map<String, String[]> parameterMap);
 }

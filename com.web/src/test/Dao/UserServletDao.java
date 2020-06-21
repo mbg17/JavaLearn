@@ -1,9 +1,12 @@
 package test.Dao;
 
 import Servlet.User;
+import test.Domain.PageBean;
 import test.Domain.Student;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public interface UserServletDao {
     public List<Student> findAll();
@@ -19,4 +22,8 @@ public interface UserServletDao {
     void update(Student student);
 
     void delSelected(String[] uids);
+
+    int findTotalCount(Map<String, String[]> parameterMap);
+
+    PageBean<Student> findStudentByPage(String currentPage, Map<String, String[]> parameterMap);
 }
