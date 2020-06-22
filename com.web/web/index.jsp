@@ -26,7 +26,7 @@
 <body>
 <div align="center">
   <a
-          href="/userServlet" style="text-decoration:none;font-size:33px">欢迎${requestScope.user}查询所有用户信息
+          href="/userServlet" style="text-decoration:none;font-size:33px">欢迎${sessionScope.user.username}查询所有用户信息
   </a>
 </div>
 </body>

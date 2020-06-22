@@ -16,15 +16,14 @@ import java.util.Map;
 
 @WebServlet("/addUserServlet")
 public class AddUserServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         Map<String, String[]> parameterMap = request.getParameterMap();
         Student student = new Student();
         try {
             BeanUtils.populate(student,parameterMap);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         UserListServiceImpl userListService = new UserListServiceImpl();
@@ -32,6 +31,7 @@ public class AddUserServlet extends HttpServlet {
         response.sendRedirect("/userServlet");
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request,response);
     }

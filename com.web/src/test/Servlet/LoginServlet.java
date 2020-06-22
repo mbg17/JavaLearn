@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -30,7 +31,8 @@ public class LoginServlet extends HttpServlet {
                 BeanUtils.populate(user,parameterMap);
                 User user1 = new UserListServiceImpl().login(user);
                 if(user1!=null){
-                    request.setAttribute("user",user1.getUsername());
+                    HttpSession session = request.getSession();
+                    session.setAttribute("user",user1);
                     RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
                     requestDispatcher.forward(request,response);
                 }else{
