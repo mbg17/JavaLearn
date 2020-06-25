@@ -23,7 +23,7 @@ public class LoginFilter implements Filter {
             if(request.getSession().getAttribute("user")!=null){
                 chain.doFilter(req, resp);
             }else{
-                request.setAttribute("errorMsg","用户未登录");
+                request.setAttribute("errorMsg","用户未登录！");
                 request.getRequestDispatcher("/login.jsp").forward(request,resp);
             }
         }
