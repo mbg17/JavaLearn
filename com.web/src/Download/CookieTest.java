@@ -15,6 +15,7 @@ import java.util.Date;
 
 @WebServlet("/CookieTest")
 public class CookieTest extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=utf-8");
         Cookie[] cookies = request.getCookies();
@@ -41,12 +42,13 @@ public class CookieTest extends HttpServlet {
         cookie.setMaxAge(60 * 60 *24 * 30);
         response.addCookie(cookie);
         if(flag==false && time ==null){
-            response.getWriter().write("欢迎首次访问");
+            response.getWriter().write("欢迎首次访问！");
         }else{
             response.getWriter().write("上次访问时间为"+time);
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }
