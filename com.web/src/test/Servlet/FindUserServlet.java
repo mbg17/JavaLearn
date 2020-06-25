@@ -12,10 +12,12 @@ import java.io.IOException;
 
 @WebServlet("/findUserServlet")
 public class FindUserServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         UserListServiceImpl userListService = new UserListServiceImpl();

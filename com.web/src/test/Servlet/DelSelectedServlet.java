@@ -12,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet("/delSelectedServlet")
 public class DelSelectedServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
             String[] uids = request.getParameterValues("uid");
@@ -24,6 +25,7 @@ public class DelSelectedServlet extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

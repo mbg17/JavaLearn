@@ -18,6 +18,7 @@ import java.util.Set;
 
 @WebServlet("/userServlet")
 public class UserServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, String[]> parameterMap = request.getParameterMap();
         String currentPage = request.getParameter("currentPage");
@@ -33,6 +34,7 @@ public class UserServlet extends HttpServlet {
         request.getRequestDispatcher("/list.jsp").forward(request,response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }

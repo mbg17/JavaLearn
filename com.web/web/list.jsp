@@ -103,14 +103,14 @@
     <div>
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <li <c:if test="${requestScope.PageBean.currentPage==1}">class="disabled"</c:if>>
+                <li <c:if test="${requestScope.PageBean.currentPage==1 || requestScope.PageBean.currentPage==0}">class="disabled"</c:if>>
                     <c:if test="${requestScope.PageBean.currentPage-1<=0}">
-                        <a href="/userServlet?currentPage=1&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
+                        <a href="${pageContext.request.contextPath}/userServlet?currentPage=1&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </c:if>
                     <c:if test="${requestScope.PageBean.currentPage-1>0}">
-                        <a href="/userServlet?currentPage=${requestScope.PageBean.currentPage-1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
+                        <a href="${pageContext.request.contextPath}/userServlet?currentPage=${requestScope.PageBean.currentPage-1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </c:if>
@@ -119,30 +119,30 @@
                     <c:forEach begin="${requestScope.PageBean.currentPage}" end="${requestScope.PageBean.currentPage+6}"
                                var="page" step="1">
                         <li <c:if test="${requestScope.PageBean.currentPage==page}">class="active"</c:if>><a
-                                href="/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
+                                href="${pageContext.request.contextPath}/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
                     </c:forEach>
                 </c:if>
-                <c:if test="${requestScope.PageBean.currentPage+6>=requestScope.PageBean.totalPages}">
-                    <c:forEach begin="${requestScope.PageBean.totalPages-6}" end="${requestScope.PageBean.totalPages}" var="page" step="1">
+                <c:if test="${requestScope.PageBean.totalPages<=6}">
+                    <c:forEach begin="1" end="${requestScope.PageBean.totalPages==0?1:requestScope.PageBean.totalPages}" var="page" step="1">
                         <li <c:if test="${requestScope.PageBean.currentPage==page}">class="active"</c:if>><a
-                                href="/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
+                                href="${pageContext.request.contextPath}/userServlet?currentPage=${page}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}">${page}</a></li>
                     </c:forEach>
                 </c:if>
                 <li
-                        <c:if test="${requestScope.PageBean.currentPage==requestScope.PageBean.totalPages}">class="disabled"</c:if>>
+                        <c:if test="${requestScope.PageBean.currentPage==requestScope.PageBean.totalPages||requestScope.PageBean.currentPage==0}">class="disabled"</c:if>>
                     <c:if test="${requestScope.PageBean.currentPage+1>requestScope.PageBean.totalPages}">
-                        <a href="/userServlet?currentPage=${requestScope.PageBean.totalPages}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
+                        <a href="${pageContext.request.contextPath}/userServlet?currentPage=${requestScope.PageBean.totalPages==0?1:requestScope.PageBean.totalPages}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </c:if>
                     <c:if test="${requestScope.PageBean.currentPage+1<=requestScope.PageBean.totalPages}">
-                        <a href="/userServlet?currentPage=${requestScope.PageBean.currentPage+1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
+                        <a href="${pageContext.request.contextPath}/userServlet?currentPage=${requestScope.PageBean.currentPage+1}&name=${requestScope.parameterMap.name[0]}&address=${requestScope.parameterMap.address[0]}&email=${requestScope.parameterMap.email[0]}" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </c:if>
                 </li>
                 <span style="font-size: 25px;margin-left: 5px;">
-                    共${requestScope.PageBean.totalCount}条记录，共${requestScope.PageBean.totalPages}页
+                    共${requestScope.PageBean.totalCount}条记录，共${requestScope.PageBean.totalPages==0?1:requestScope.PageBean.totalPages}页
                 </span>
 
             </ul>

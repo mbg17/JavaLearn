@@ -20,7 +20,6 @@ public class LoginFilter implements Filter {
         if(requestURI.contains("/checkCode")||"/login.jsp".equals(requestURI) || "/loginServlet".equals(requestURI)|| requestURI.contains("/css")|| requestURI.contains("/js")){
             chain.doFilter(req, resp);
         }else{
-            System.out.println(request.getSession().getAttribute("user"));
             if(request.getSession().getAttribute("user")!=null){
                 chain.doFilter(req, resp);
             }else{

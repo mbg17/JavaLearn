@@ -19,10 +19,12 @@ import java.util.Map;
 
 @WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         Map<String, String[]> parameterMap = request.getParameterMap();
         String code = request.getParameter("verifycode");
+        System.out.println(code);
         String checkcode_server = (String) request.getSession().getAttribute("CHECKCODE_SERVER");
         request.getSession().removeAttribute("CHECKCODE_SERVER");
         User user = new User();
@@ -45,13 +47,12 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/login.jsp");
                 requestDispatcher.forward(request,response);
             }
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }
