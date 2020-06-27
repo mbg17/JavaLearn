@@ -11,6 +11,7 @@ import java.io.*;
 
 @WebServlet("/download")
 public class FileDownload extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String filename = request.getParameter("filename");
         ServletContext servletContext = this.getServletContext();
@@ -28,6 +29,7 @@ public class FileDownload extends HttpServlet {
         inputputStream.close();
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }
