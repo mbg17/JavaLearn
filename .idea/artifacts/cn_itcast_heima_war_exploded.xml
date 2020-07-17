@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cn.itcast.heima:war exploded">
+    <output-path>$PROJECT_DIR$/com.javalearn/cn.itcast.heima/target/travel</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>cn.itcast.heima</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cn.itcast.heima" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/cn.itcast.heima/target/travel/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cn.itcast.heima/web/Web" />
+    </root>
+  </artifact>
+</component>

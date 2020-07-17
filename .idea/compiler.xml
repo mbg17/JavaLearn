@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MybatisTest" />
+        <module name="Mybatis" />
+        <module name="cn.itcast" />
+        <module name="day01_eesy_04mybatis_design" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cn.itcast" target="1.8" />
+      <module name="cn.itcast.heima" target="13" />
+      <module name="com.maven-idea" target="13" />
+      <module name="com.maven-test" target="1.8" />
+      <module name="day01_eesy_04mybatis_design" target="13" />
+      <module name="MybaitsTest" target="13" />
+      <module name="Mybatis" target="13" />
+      <module name="MybatisCurd" target="13" />
+      <module name="MybatisTest" target="13" />
+      <module name="MybeatisCurd" target="13" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cn.itcast.heima:war">
+    <output-path>$PROJECT_DIR$/com.javalearn/cn.itcast.heima/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cn.itcast.heima</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="travel.war">
+      <element id="artifact" artifact-name="cn.itcast.heima:war exploded" />
+    </root>
+  </artifact>
+</component>

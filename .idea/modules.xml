@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MybatisTest/MybatisTest.iml" filepath="$PROJECT_DIR$/MybatisTest/MybatisTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cn.itcast/cn.itcast.iml" filepath="$PROJECT_DIR$/cn.itcast/cn.itcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.javalearn/com.javalearn.iml" filepath="$PROJECT_DIR$/com.javalearn/com.javalearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" filepath="$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.maven-test/com.maven-test.iml" filepath="$PROJECT_DIR$/com.maven-test/com.maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.web/com.web.iml" filepath="$PROJECT_DIR$/com.web/com.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" filepath="$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" />
     </modules>
   </component>
 </project>
