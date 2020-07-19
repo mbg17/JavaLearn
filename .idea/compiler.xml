@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MybatisTest" />
         <module name="Mybatis" />
+        <module name="CURD" />
         <module name="cn.itcast" />
         <module name="day01_eesy_04mybatis_design" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="cn.itcast.heima" target="13" />
       <module name="com.maven-idea" target="13" />
       <module name="com.maven-test" target="1.8" />
+      <module name="CURD" target="13" />
       <module name="day01_eesy_04mybatis_design" target="13" />
       <module name="MybaitsTest" target="13" />
       <module name="Mybatis" target="13" />

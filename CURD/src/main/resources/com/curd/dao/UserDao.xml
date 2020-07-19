@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curd.dao.UserDao">
+    <!-- 配置一堆一对应关系
+    collection 一对多配置 ：ofType 一对多映射实体类
+    -->
+    <resultMap id="userAccounts" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+        <result property="birthday" column="birthday"></result>
+        <collection property="accounts" ofType="account">
+            <id property="id" column="aid"></id>
+            <result property="uid" column="uid"></result>
+            <result property="money" column="money"></result>
+        </collection>
+        <collection property="roles" ofType="role">
+            <id property="id" column="rid"></id>
+            <result property="roleName" column="role_name"></result>
+            <result property="roleDesc" column="role_desc"></result>
+        </collection>
+    </resultMap>
+
+    <!--配置查询所有-->
+    <select id="findAll" resultMap="userAccounts">
+        select u.*,a.id as aid,a.uid,a.money,r.id as rid,r.role_name,r.role_desc from user u left outer join account a on a.uid = u.id
+        left join user_role ur on u.id = ur.uid left join role r on r.id=ur.rid;
+    </select>
+    <select id="findById" resultType="User" parameterType="Integer">
+        select * from user where id=#{uid}
+    </select>
+    <select id="findByName" resultType="User" parameterType="String">
+        select * from user where username like #{username}
+    </select>
+
+    <insert id="saveUser" parameterType="User">
+        <selectKey resultType="Integer" order="AFTER" keyColumn="id" keyProperty="id">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into user (username,birthday,sex,address) values (#{username},#{birthday},#{sex},#{address})
+    </insert>
+
+    <update id="delUser" parameterType="Integer">
+        delete from user where id=#{uid}
+    </update>
+
+    <update id="updateUser" parameterType="User">
+        update user set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} where id = #{id}
+    </update>
+
+    <select id="findTotal" resultType="Integer">
+        select count(1) from user;
+    </select>
+
+    <!-- 通过用户信息查询用户列表 -->
+    <select id="findByUser" parameterType="User" resultType="User">
+        select * from user
+        <where>
+            <if test="username != null">
+                and username=#{username}
+            </if>
+            <if test="sex !=null">
+                and sex = #{sex}
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过列表查询用户列表 -->
+    <select id="findByList" parameterType="list" resultType="User">
+        select * from user
+        <where>
+            <if test="list !=null and list.size() >0">
+                <foreach collection="list" open="and id in (" close=")" item="id" separator=",">
+                    ${id}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过封装对象查询用户列表 -->
+    <select id="findByQueryVo" parameterType="com.curd.domain.QueryVo" resultType="User">
+        select * from user
+        <where>
+            <if test="ids !=null and ids.size() >0">
+                <foreach collection="ids" open="and id in (" close=")" item="id" separator=",">
+                    ${id}
+                </foreach>
+            </if>
+        </where>
+    </select>
+</mapper>
