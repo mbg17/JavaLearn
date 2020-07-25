@@ -49,6 +49,17 @@ public class UserTest {
     }
 
     /**
+     * 查询所有用户
+     */
+    @Test
+    public void testFindUserRoles() {
+        List<User> all = mapper.findUserRoles();
+        for (User user : all) {
+            System.out.println(user);
+        }
+    }
+
+    /**
      * 根据id查询用户
      */
     @Test

@@ -12,11 +12,21 @@
         <result property="sex" column="sex"></result>
         <result property="address" column="address"></result>
         <result property="birthday" column="birthday"></result>
-        <collection property="accounts" ofType="account">
+        <!-- 立即加载模式 -->
+        <!--<collection property="accounts" ofType="account">
             <id property="id" column="aid"></id>
             <result property="uid" column="uid"></result>
             <result property="money" column="money"></result>
-        </collection>
+        </collection>-->
+        <!-- 延迟加载模式 -->
+        <collection property="accounts" column="id" select="com.curd.dao.AccountDao.findAllByUserId"></collection>
+    </resultMap>
+    <resultMap id="userRoles" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+        <result property="birthday" column="birthday"></result>
         <collection property="roles" ofType="role">
             <id property="id" column="rid"></id>
             <result property="roleName" column="role_name"></result>
@@ -25,9 +35,12 @@
     </resultMap>
 
     <!--配置查询所有-->
+    <select id="findUserRoles" resultMap="userRoles">
+        select u.*,r.id as rid,r.role_name,r.role_desc from user u left
+        join user_role ur on u.id = ur.uid left join role r on r.id=ur.rid;
+    </select>
     <select id="findAll" resultMap="userAccounts">
-        select u.*,a.id as aid,a.uid,a.money,r.id as rid,r.role_name,r.role_desc from user u left outer join account a on a.uid = u.id
-        left join user_role ur on u.id = ur.uid left join role r on r.id=ur.rid;
+        select * from user
     </select>
     <select id="findById" resultType="User" parameterType="Integer">
         select * from user where id=#{uid}
@@ -35,7 +48,7 @@
     <select id="findByName" resultType="User" parameterType="String">
         select * from user where username like #{username}
     </select>
-
+    <!--keyColumn 列名 keyProperty 字段名 -->
     <insert id="saveUser" parameterType="User">
         <selectKey resultType="Integer" order="AFTER" keyColumn="id" keyProperty="id">
             select LAST_INSERT_ID()

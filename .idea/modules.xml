@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CURD/CURD.iml" filepath="$PROJECT_DIR$/CURD/CURD.iml" />
       <module fileurl="file://$PROJECT_DIR$/MybatisTest/MybatisTest.iml" filepath="$PROJECT_DIR$/MybatisTest/MybatisTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest/SpringTest.iml" filepath="$PROJECT_DIR$/SpringTest/SpringTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/cn.itcast/cn.itcast.iml" filepath="$PROJECT_DIR$/cn.itcast/cn.itcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.javalearn/com.javalearn.iml" filepath="$PROJECT_DIR$/com.javalearn/com.javalearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" filepath="$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" />

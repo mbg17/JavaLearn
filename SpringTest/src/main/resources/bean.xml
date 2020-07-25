@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 直接使用接口类方式-->
+    <bean id="accountServie" class="com.spring.test.service.impl.AccountServiceImpl" scope="singleton"/>
+    <!-- 直接使用工厂类方式-->
+    <bean id="factory" class="com.spring.test.factory.Factory"/>
+    <bean id="accountServiveFactory" factory-bean="factory" factory-method="getAccountService"/>
+    <!-- 直接使用工厂类静态方法方式-->
+    <bean id="accountServiceStatice" class="com.spring.test.factory.Factory" factory-method="getAccountServiceStatic"/>
+    <!--使用构造方式注入-->
+    <bean id="accountService" class="com.spring.test.service.impl.AccountServiceImpl">
+        <constructor-arg name="name" value="luyuan"/>
+        <constructor-arg name="age" value="18"/><!--value 给基本类型赋值-->
+        <constructor-arg name="birthday" ref="now"/><!--ref 引用spring容器中存在的bean对象-->
+    </bean>
+    <bean id="now" class="java.util.Date"/>
+    <!--使用set方式注入-->
+    <bean id="accountSet" class="com.spring.test.service.impl.AccountServiceImpl">
+        <property name="age" value="12"></property>
+        <property name="birthday" ref="now"></property>
+        <property name="name" value="luyuan"></property>
+        <property name="myList">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+        <property name="mySet">
+            <set>
+                <value>ddd</value>
+                <value>eee</value>
+                <value>fff</value>
+            </set>
+        </property>
+        <property name="myStrs">
+            <array>
+                <value>ggg</value>
+                <value>hhh</value>
+                <value>iii</value>
+            </array>
+        </property>
+        <property name="myMap">
+            <map>
+                <entry key="1" value="1"></entry>
+                <entry key="2" value="2"></entry>
+                <entry key="3" value="3"></entry>
+            </map>
+        </property>
+        <property name="myProps">
+            <props>
+                <prop key="hehe">111</prop>
+                <prop key="gaga">222</prop>
+                <prop key="htgh">333</prop>
+            </props>
+        </property>
+    </bean>
+    <!--注解方式注入 配置扫描路径-->
+    <context:component-scan base-package="com.spring.test"/>
+</beans>

@@ -6,6 +6,11 @@
 <configuration>
     <!-- 配置分离 -->
     <properties resource="jdbc.properties"></properties>
+    <!-- 延迟加载 -->
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
     <!-- 配置接口映射-->
     <typeAliases>
         <!-- 配置映射的实体类名 -->

@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MybatisTest" />
-        <module name="Mybatis" />
-        <module name="CURD" />
         <module name="cn.itcast" />
         <module name="day01_eesy_04mybatis_design" />
+        <module name="Mybatis" />
+        <module name="SpringTest" />
+        <module name="CURD" />
+        <module name="MybatisTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="MybatisCurd" target="13" />
       <module name="MybatisTest" target="13" />
       <module name="MybeatisCurd" target="13" />
+      <module name="SpringTest" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>

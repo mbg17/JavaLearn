@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/cn.itcast" />
     <file type="web" url="file://$PROJECT_DIR$/com.javalearn/cn.itcast.heima" />
     <file type="web" url="file://$PROJECT_DIR$/com.maven-test" />
+    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,6 +14,7 @@
         <option value="$PROJECT_DIR$/MybatisTest/pom.xml" />
         <option value="$PROJECT_DIR$/Mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/CURD/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
       </list>
     </option>
   </component>

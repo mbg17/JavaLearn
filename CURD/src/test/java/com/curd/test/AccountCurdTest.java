@@ -57,4 +57,18 @@ public class AccountCurdTest {
             System.out.println(account);
         }
     }
+
+    @Test
+    public void testInsert() {
+        Account account = new Account();
+        account.setId(4);
+        account.setMoney(5000.00);
+        account.setUid(42);
+        mapper.insertAccount(account);
+    }
+
+    @Test
+    public void testDelete() {
+        mapper.deleteAccount(41);
+    }
 }

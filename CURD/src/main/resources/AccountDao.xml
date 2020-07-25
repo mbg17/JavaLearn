@@ -10,18 +10,25 @@
         <id property="id" column="aid"></id>
         <result property="uid" column="uid"></result>
         <result property="money" column="money"></result>
-        <association property="user" javaType="user">
+        <!-- 立即加载模式 -->
+        <!--<association property="user" javaType="user">
             <id property="id" column="id1"></id>
             <result property="username" column="username"></result>
             <result property="address" column="address"></result>
-        </association>
+        </association>-->
+        <!-- 延迟加载模式 -->
+        <association property="user" column="uid" select="com.curd.dao.UserDao.findById"></association>
     </resultMap>
 
     <select id="findAll" resultType="account">
-        select * from account;
+        select * from account
     </select>
 
     <select id="findAllByUser" resultMap="accountUser">
-        select u.id,u.username,u.address ,a.id as aid, a.uid,a.money from user u,account a where u.id= a.uid;
+        select * from account
+    </select>
+
+    <select id="findAllByUserId" resultType="account">
+        select * from account where uid = #{uid}
     </select>
 </mapper>
