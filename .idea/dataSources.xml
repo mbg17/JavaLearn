@@ -10,5 +10,12 @@
         <property name="serverTimezone" value="GMT" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="Oracle - @localhost" uuid="4a439360-91da-4f0d-8361-390a3386681e">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//localhost:1521/root</jdbc-url>
+    </data-source>
   </component>
 </project>

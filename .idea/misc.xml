@@ -4,6 +4,10 @@
     <file type="web" url="file://$PROJECT_DIR$/cn.itcast" />
     <file type="web" url="file://$PROJECT_DIR$/com.javalearn/cn.itcast.heima" />
     <file type="web" url="file://$PROJECT_DIR$/com.maven-test" />
+    <file type="web" url="file://$PROJECT_DIR$/MySpringMvc" />
+    <file type="web" url="file://$PROJECT_DIR$/mySsm" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day01_01_start" />
+    <file type="web" url="file://$PROJECT_DIR$/ssmTranslate" />
     <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
@@ -15,6 +19,12 @@
         <option value="$PROJECT_DIR$/Mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/CURD/pom.xml" />
         <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
+        <option value="$PROJECT_DIR$/springAnnotation/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringCurd/pom.xml" />
+        <option value="$PROJECT_DIR$/day03_eesy_04adviceType/pom.xml" />
+        <option value="$PROJECT_DIR$/MySpringMvc/pom.xml" />
+        <option value="$PROJECT_DIR$/mySsm/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmTranslate/pom.xml" />
       </list>
     </option>
   </component>

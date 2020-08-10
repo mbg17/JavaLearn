@@ -6,12 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MybatisTest" />
+        <module name="MySpringMvc" />
+        <module name="ssmTranslate" />
+        <module name="day03_eesy_04adviceType" />
         <module name="cn.itcast" />
         <module name="day01_eesy_04mybatis_design" />
         <module name="Mybatis" />
         <module name="SpringTest" />
+        <module name="SpringAnncation" />
+        <module name="mySsm" />
         <module name="CURD" />
-        <module name="MybatisTest" />
+        <module name="SpringTest (1)" />
+        <module name="SpringCurd" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,12 +28,22 @@
       <module name="com.maven-test" target="1.8" />
       <module name="CURD" target="13" />
       <module name="day01_eesy_04mybatis_design" target="13" />
+      <module name="day03_eesy_04adviceType" target="13" />
+      <module name="day04_eesy_07anno_tx_withoutxml" target="13" />
       <module name="MybaitsTest" target="13" />
       <module name="Mybatis" target="13" />
       <module name="MybatisCurd" target="13" />
       <module name="MybatisTest" target="13" />
       <module name="MybeatisCurd" target="13" />
+      <module name="MySpringMvc" target="13" />
+      <module name="mySsm" target="13" />
+      <module name="SpringAnncation" target="13" />
+      <module name="springAnnotation" target="13" />
+      <module name="SpringCurd" target="13" />
+      <module name="springmvc_day01_01_start" target="13" />
       <module name="SpringTest" target="13" />
+      <module name="SpringTest (1)" target="13" />
+      <module name="ssmTranslate" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>

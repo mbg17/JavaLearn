@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mySsm:war">
+    <output-path>$PROJECT_DIR$/mySsm/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mySsm</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mySsm.war">
+      <element id="artifact" artifact-name="mySsm:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -3,14 +3,21 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CURD/CURD.iml" filepath="$PROJECT_DIR$/CURD/CURD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MySpringMvc/MySpringMvc.iml" filepath="$PROJECT_DIR$/MySpringMvc/MySpringMvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/MybatisTest/MybatisTest.iml" filepath="$PROJECT_DIR$/MybatisTest/MybatisTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springAnnotation/SpringAnncation.iml" filepath="$PROJECT_DIR$/springAnnotation/SpringAnncation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCurd/SpringCurd.iml" filepath="$PROJECT_DIR$/SpringCurd/SpringCurd.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest/SpringTest.iml" filepath="$PROJECT_DIR$/SpringTest/SpringTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCurd/SpringTest (1).iml" filepath="$PROJECT_DIR$/SpringCurd/SpringTest (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/cn.itcast/cn.itcast.iml" filepath="$PROJECT_DIR$/cn.itcast/cn.itcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.javalearn/com.javalearn.iml" filepath="$PROJECT_DIR$/com.javalearn/com.javalearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" filepath="$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.maven-test/com.maven-test.iml" filepath="$PROJECT_DIR$/com.maven-test/com.maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.web/com.web.iml" filepath="$PROJECT_DIR$/com.web/com.web.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" filepath="$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03_eesy_04adviceType/day03_eesy_04adviceType.iml" filepath="$PROJECT_DIR$/day03_eesy_04adviceType/day03_eesy_04adviceType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySsm/mySsm.iml" filepath="$PROJECT_DIR$/mySsm/mySsm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmTranslate/ssmTranslate.iml" filepath="$PROJECT_DIR$/ssmTranslate/ssmTranslate.iml" />
     </modules>
   </component>
 </project>
