@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rpm:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rpm_jar</output-path>
+    <root id="archive" name="rpm.jar">
+      <element id="module-output" name="rpm" />
+    </root>
+  </artifact>
+</component>

@@ -7,17 +7,18 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.sql.SQLException;
+import java.util.Arrays;
 
 @Component("transactionUtils")
-//@Aspect
+@Aspect
 public class TransactionUtils {
-//    @Autowired
+    @Autowired
     private ConnectionUtils connectionUtils;
 
     /**
      * Pointcut切入点方法（配置切入点方法的路径）
      */
-//    @Pointcut("execution(* com.springcurd.test.service.impl.*.*(..))")
+    @Pointcut("execution(* com.springcurd.test.service.impl.*.*(..))")
     public void pt(){
     }
 
@@ -30,7 +31,7 @@ public class TransactionUtils {
      * @param pjp
      * @return
      */
-//    @Around("pt()")
+    @Around("pt()")
     public Object aroundTransaction(ProceedingJoinPoint pjp){
         Object invoke = null;
         try {

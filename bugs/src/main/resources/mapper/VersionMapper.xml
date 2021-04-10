@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bugs.dao.VersionMapper">
+    <resultMap id="BaseResultMap" type="version">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="version" column="version" jdbcType="VARCHAR"/>
+        <result property="detail" column="detail" jdbcType="VARCHAR"/>
+        <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="modifyBy" column="modify_by" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,version,detail,
+        create_by,
+        create_time,modify_by,update_time
+    </sql>
+
+    <select id="findAllVersion" resultType="string">
+        select version
+        from version
+    </select>
+
+    <update id="modifyVersion" parameterType="hashmap">
+        update version
+        set version    = #{version},
+            detail     = #{detail},
+            modify_by  = #{username}
+        where id = #{id}
+    </update>
+</mapper>

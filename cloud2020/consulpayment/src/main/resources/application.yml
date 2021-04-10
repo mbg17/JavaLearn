@@ -1,0 +1,16 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: spring-consul-payment
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true
+        heartbeat:
+          enabled: true
+        hostname: localhost

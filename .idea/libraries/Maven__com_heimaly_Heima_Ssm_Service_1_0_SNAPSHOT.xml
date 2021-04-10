@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.heimaly:Heima_Ssm_Service:1.0-SNAPSHOT">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Service/Heima_Ssm_Service-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../develop/mavenRepr/com/heimaly/Heima_Ssm_Service/1.0-SNAPSHOT/Heima_Ssm_Service-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Service/Heima_Ssm_Service-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../develop/mavenRepr/com/heimaly/Heima_Ssm_Service/1.0-SNAPSHOT/Heima_Ssm_Service-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bugs.dao.ListMapper">
+    <resultMap id="BaseResultMap" type="lists">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="project" column="project" jdbcType="VARCHAR"/>
+        <result property="module" column="module" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="priority" column="priority" jdbcType="INTEGER"/>
+        <result property="level" column="LEVEL" jdbcType="INTEGER"/>
+        <result property="version" column="version" jdbcType="VARCHAR"/>
+        <result property="people" column="people" jdbcType="VARCHAR"/>
+        <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="modifyBy" column="modify_by" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,project,module,
+        title,priority,LEVEL,
+        version,people,create_by,
+        create_time,modify_by,update_time
+    </sql>
+
+    <insert id="addBug">
+        insert into list(level, module, create_by, modify_by, project, title, priority, version, people)
+        values (#{level}, #{module}, #{nickname}, #{nickname}, #{project}, #{title}, #{priority}, #{version}, #{people})
+    </insert>
+
+    <select id="getBugDetail" resultType="hashmap">
+        select count(1) as value,
+               (case level
+                    when '1' then '小问题'
+                    when '2' then '一般问题'
+                    when '3' then '轻度问题'
+                    when '4' then '优化问题'
+                    when '5' then '中度问题'
+                    when '6' then '重复发现问题'
+                    when '7' then '严重生产问题' end
+                   )    as name
+        from list
+        GROUP BY LEVEL</select>
+
+    <select id="submitBugs" resultType="hashmap">
+        select count(1) as value, u.nickname as name
+        from user u
+                 inner join list l on u.nickname = l.create_by
+        group BY l.create_by order by value asc
+    </select>
+
+    <select id="createBugs" resultType="hashmap">
+        select count(1) as value, u.nickname as name
+        from user u
+                 inner join list l on u.nickname = l.people
+        group BY l.people order by value asc
+    </select>
+
+    <select id="hasVersion" resultType="string">
+        select version from list
+    </select>
+</mapper>

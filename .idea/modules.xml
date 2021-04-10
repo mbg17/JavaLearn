@@ -3,21 +3,68 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CURD/CURD.iml" filepath="$PROJECT_DIR$/CURD/CURD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/Cloud-provider-payment8002/Cloud-provider-payment8002.iml" filepath="$PROJECT_DIR$/cloud2020/Cloud-provider-payment8002/Cloud-provider-payment8002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HeimaSsm/HeimaSsm.iml" filepath="$PROJECT_DIR$/HeimaSsm/HeimaSsm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Service/Heima_Ssm_Servie.iml" filepath="$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Service/Heima_Ssm_Servie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenParent/MavenDao/MavenDao.iml" filepath="$PROJECT_DIR$/MavenParent/MavenDao/MavenDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenParent/MavenParent.iml" filepath="$PROJECT_DIR$/MavenParent/MavenParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenParent/MavenService/MavenService.iml" filepath="$PROJECT_DIR$/MavenParent/MavenService/MavenService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenParent/MavenWeb/MavenWeb.iml" filepath="$PROJECT_DIR$/MavenParent/MavenWeb/MavenWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/MySpringMvc/MySpringMvc.iml" filepath="$PROJECT_DIR$/MySpringMvc/MySpringMvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/MybatisTest/MybatisTest.iml" filepath="$PROJECT_DIR$/MybatisTest/MybatisTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/SSM.iml" filepath="$PROJECT_DIR$/SSM/SSM.iml" />
       <module fileurl="file://$PROJECT_DIR$/springAnnotation/SpringAnncation.iml" filepath="$PROJECT_DIR$/springAnnotation/SpringAnncation.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCurd/SpringCurd.iml" filepath="$PROJECT_DIR$/SpringCurd/SpringCurd.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest/SpringTest.iml" filepath="$PROJECT_DIR$/SpringTest/SpringTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCurd/SpringTest (1).iml" filepath="$PROJECT_DIR$/SpringCurd/SpringTest (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-alibaba-sentinel/cloud-alibaba-sentinel.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-alibaba-sentinel/cloud-alibaba-sentinel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-api-common/cloud-api-common.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-api-common/cloud-api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-config-center/cloud-config-center.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-config-center/cloud-config-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-config-son/cloud-config-son.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-config-son/cloud-config-son.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-consumer-hystrix-dashboard9001/cloud-consumer-hystrix-dashboard9001.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-consumer-hystrix-dashboard9001/cloud-consumer-hystrix-dashboard9001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-feign-order80/cloud-feign-order80.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-feign-order80/cloud-feign-order80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-gateway-9527/cloud-gateway-9527.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-gateway-9527/cloud-gateway-9527.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-nacos-config/cloud-nacos-config.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-nacos-config/cloud-nacos-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer/cloud-nacos-consumer.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-nacos-consumer/cloud-nacos-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer-9003/cloud-nacos-consumer-9003.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-nacos-consumer-9003/cloud-nacos-consumer-9003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-nacos-payment9002/cloud-nacos-payment9002.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-nacos-payment9002/cloud-nacos-payment9002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-provider-hystrix-payment8001/cloud-provider-hystrix-payment8001.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-provider-hystrix-payment8001/cloud-provider-hystrix-payment8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8802/cloud-stream-rabbitmq-consumer8802.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8802/cloud-stream-rabbitmq-consumer8802.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8803/cloud-stream-rabbitmq-consumer8803.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8803/cloud-stream-rabbitmq-consumer8803.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-provider8801/cloud-stream-rabbitmq-provider8801.iml" filepath="$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-provider8801/cloud-stream-rabbitmq-provider8801.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud2020.iml" filepath="$PROJECT_DIR$/cloud2020/cloud2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/clous-nacos-payment9001/clous-nacos-payment9001.iml" filepath="$PROJECT_DIR$/cloud2020/clous-nacos-payment9001/clous-nacos-payment9001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cn.itcast/cn.itcast.iml" filepath="$PROJECT_DIR$/cn.itcast/cn.itcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.javalearn/com.javalearn.iml" filepath="$PROJECT_DIR$/com.javalearn/com.javalearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" filepath="$PROJECT_DIR$/com.jsonRedis/com.jsonRedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.maven-test/com.maven-test.iml" filepath="$PROJECT_DIR$/com.maven-test/com.maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.web/com.web.iml" filepath="$PROJECT_DIR$/com.web/com.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/consulorder/consulorder.iml" filepath="$PROJECT_DIR$/cloud2020/consulorder/consulorder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/consulpayment/consulpayment.iml" filepath="$PROJECT_DIR$/cloud2020/consulpayment/consulpayment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" filepath="$PROJECT_DIR$/Mybatis/day01_eesy_04mybatis_design.iml" />
       <module fileurl="file://$PROJECT_DIR$/day03_eesy_04adviceType/day03_eesy_04adviceType.iml" filepath="$PROJECT_DIR$/day03_eesy_04adviceType/day03_eesy_04adviceType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/cloud-consumer-order80/demo (1) (cloud-consumer-order80).iml" filepath="$PROJECT_DIR$/cloud2020/cloud-consumer-order80/demo (1) (cloud-consumer-order80).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/heima_ssm_dao/heima_ssm_dao.iml" filepath="$PROJECT_DIR$/SSM/heima_ssm_dao/heima_ssm_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/heima_ssm_domain/heima_ssm_domain.iml" filepath="$PROJECT_DIR$/SSM/heima_ssm_domain/heima_ssm_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/heima_ssm_services/heima_ssm_services.iml" filepath="$PROJECT_DIR$/SSM/heima_ssm_services/heima_ssm_services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/heima_ssm_utils/heima_ssm_utils.iml" filepath="$PROJECT_DIR$/SSM/heima_ssm_utils/heima_ssm_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/heima_ssm_web/heima_ssm_web.iml" filepath="$PROJECT_DIR$/SSM/heima_ssm_web/heima_ssm_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mySsm/mySsm.iml" filepath="$PROJECT_DIR$/mySsm/mySsm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myStarter-spring-boot-starter/myStarter-spring-boot-starter.iml" filepath="$PROJECT_DIR$/myStarter-spring-boot-starter/myStarter-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/seata-Storage-Module/seata-Storage-Module.iml" filepath="$PROJECT_DIR$/cloud2020/seata-Storage-Module/seata-Storage-Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/seata-account-service/seata-account-service.iml" filepath="$PROJECT_DIR$/cloud2020/seata-account-service/seata-account-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/seata-order-service2001/seata-order-service2001.iml" filepath="$PROJECT_DIR$/cloud2020/seata-order-service2001/seata-order-service2001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/server7001/server7001.iml" filepath="$PROJECT_DIR$/cloud2020/server7001/server7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/server7002/server7002.iml" filepath="$PROJECT_DIR$/cloud2020/server7002/server7002.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssmTranslate/ssmTranslate.iml" filepath="$PROJECT_DIR$/ssmTranslate/ssmTranslate.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-parent.iml" filepath="$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-parent.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-server/wetech-admin-server.iml" filepath="$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-server/wetech-admin-server.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-ui/wetech-admin-ui.iml" filepath="$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-ui/wetech-admin-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/zookeeper8004/zookeeper8004.iml" filepath="$PROJECT_DIR$/cloud2020/zookeeper8004/zookeeper8004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud2020/zookeeperorder80/zookeeperorder80.iml" filepath="$PROJECT_DIR$/cloud2020/zookeeperorder80/zookeeperorder80.iml" />
     </modules>
   </component>
 </project>

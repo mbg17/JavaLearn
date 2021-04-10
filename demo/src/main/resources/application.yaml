@@ -1,0 +1,62 @@
+# 实体类映射配置
+person:
+  name: lisi
+  age: 20
+  boss: true
+  pets: [dog,cat,pig]
+  test: {k1:v1,k2:v2}
+server:
+  error:
+    path: /error
+spring:
+  # 配置国际化
+  messages:
+    basename: i18n.login
+  # 配置静态资源目录
+  resources:
+    staticlocations: [classpath:/static/,classpath:/hello/]
+    addMappings: true
+  # 配置当前激活那个环境
+  profiles:
+    active: dev
+  # 替换默认日期格式化
+  mvc:
+    format:
+      date: yyyy-MM-dd
+#      web-stat-filter:
+#        enabled: true
+#        url-pattern: /*
+#        exclusions: ["*.js","*.gif","*.jpg","*.png","*.css","*.ico","/druid/*"]
+#      stat-view-servlet:
+#        enabled: true
+#        url-pattern: /druid/*
+#        reset-enable: false
+#        login-username: admin
+#        login-password: root
+#        allow: 127.0.0.1
+      # druid 配置内容
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml #指定全局配置文件的位置
+#  mapper-locations: classpath:mybatis/mapper/*.xml  #指定sql映射文件的位置
+#  configuration:
+#    map-underscore-to-camel-case: true
+debug: true
+mybatis-plus:
+#  mapper-locations: classpath:mybatis/mybatis-config.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-field: active
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      table-underline: true
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

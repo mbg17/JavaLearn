@@ -1,0 +1,23 @@
+server:
+  port: 8048
+spring:
+  application:
+    name: CLOUD-NACOS-SENTINEL
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 86863c64-ff5f-4e4c-82fa-f68b5e84e849
+        group: DEV_GROUP
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置Sentinel dashboard地址
+        port: 8719
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
