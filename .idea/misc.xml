@@ -4,9 +4,14 @@
     <file type="web" url="file://$PROJECT_DIR$/cn.itcast" />
     <file type="web" url="file://$PROJECT_DIR$/com.javalearn/cn.itcast.heima" />
     <file type="web" url="file://$PROJECT_DIR$/com.maven-test" />
+    <file type="web" url="file://$PROJECT_DIR$/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/maven_day02_parent/maven_day02_web" />
+    <file type="web" url="file://$PROJECT_DIR$/MavenParent" />
     <file type="web" url="file://$PROJECT_DIR$/MySpringMvc" />
     <file type="web" url="file://$PROJECT_DIR$/mySsm" />
+    <file type="web" url="file://$PROJECT_DIR$/spring3.0" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc_day01_01_start" />
+    <file type="web" url="file://$PROJECT_DIR$/SSM/heima_ssm_web" />
     <file type="web" url="file://$PROJECT_DIR$/ssmTranslate" />
     <type id="Spring" />
   </component>
@@ -25,7 +30,27 @@
         <option value="$PROJECT_DIR$/MySpringMvc/pom.xml" />
         <option value="$PROJECT_DIR$/mySsm/pom.xml" />
         <option value="$PROJECT_DIR$/ssmTranslate/pom.xml" />
+        <option value="$PROJECT_DIR$/MavenParent/pom.xml" />
+        <option value="$PROJECT_DIR$/HeimaSsm/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/pom.xml" />
+        <option value="$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/myStarter-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud2020/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Dao/pom.xml" />
+        <option value="$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Utils/pom.xml" />
+        <option value="$PROJECT_DIR$/HeimaSsm/Heima_Ssm_Web/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/heima_ssm_service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud2020/Cloud-provider-payment8001/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="13" project-jdk-type="JavaSDK">

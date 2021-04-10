@@ -6,6 +6,51 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="com.web" />
+          <element id="module-output" name="com.javalearn" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="libs (2)" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/druid-1.0.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/c3p0-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/jsoup-1.11.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/JsoupXpath-0.3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/spring-tx-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/spring-core-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/spring-jdbc-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/spring-beans-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/mchange-commons-java-0.2.19.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/c3p0-oracle-thin-extras-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.javalearn/src/libs/mysql-connector-java-5.1.49-bin.jar" />
+          <element id="library" level="module" name="test" module-name="com.web" />
+          <element id="library" level="project" name="web" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/jstl-impl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/druid-1.0.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/jedis-2.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/c3p0-0.9.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/c3p0-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/jsoup-1.11.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/JsoupXpath-0.3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-pool2-2.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-logging-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-beanutils-1.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-tx-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-tx-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-core-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-core-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-jdbc-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-beans-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/spring-beans-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/mchange-commons-java-0.2.19.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/commons-beanutils-core-1.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/c3p0-oracle-thin-extras-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/mysql-connector-java-5.1.18-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/com.web/web/WEB-INF/lib/mysql-connector-java-5.1.49-bin.jar" />
+          <element id="library" level="module" name="JUnit4" module-name="com.javalearn" />
         </element>
       </element>
     </root>

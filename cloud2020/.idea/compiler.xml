@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-account-service" />
+        <module name="server7001" />
+        <module name="server7002" />
+        <module name="cloud-config-son" />
+        <module name="cloud-gateway-9527" />
+        <module name="seata-order-service2001" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
+        <module name="demo" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
+        <module name="cloud-nacos-consumer-9003" />
+        <module name="zookeeper8004" />
+        <module name="cloud-alibaba-sentinel" />
+        <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-api-common" />
+        <module name="zookeeperorder80" />
+        <module name="cloud-nacos-consumer" />
+        <module name="cloud-nacos-config" />
+        <module name="consulpayment" />
+        <module name="consulorder" />
+        <module name="Cloud-provider-payment8001" />
+        <module name="cloud-config-center" />
+        <module name="clous-nacos-payment9001" />
+        <module name="seata-Storage-Module" />
+        <module name="Cloud-provider-payment8002" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-feign-order80" />
+        <module name="cloud-nacos-payment9002" />
+        <module name="cloud-consumer-order80" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="13">
+      <module name="cloud-alibaba-sentinel" target="13" />
+      <module name="cloud-api-common" target="13" />
+      <module name="cloud-config-center" target="13" />
+      <module name="cloud-config-son" target="13" />
+      <module name="cloud-consumer-feign-hystrix-order80" target="13" />
+      <module name="cloud-consumer-hystrix-dashboard9001" target="13" />
+      <module name="cloud-consumer-order80" target="13" />
+      <module name="cloud-eureka-server7001" target="13" />
+      <module name="cloud-eureka-server7002" target="13" />
+      <module name="cloud-eureka-server7003" target="13" />
+      <module name="cloud-feign-order80" target="13" />
+      <module name="cloud-gateway-9527" target="13" />
+      <module name="cloud-nacos-config" target="13" />
+      <module name="cloud-nacos-consumer" target="13" />
+      <module name="cloud-nacos-consumer-9003" target="13" />
+      <module name="cloud-nacos-payment9002" target="13" />
+      <module name="cloud-provider-hystrix-payment8001" target="13" />
+      <module name="Cloud-provider-payment8001" target="13" />
+      <module name="Cloud-provider-payment8002" target="13" />
+      <module name="cloud-stream-rabbitmq-consumer8802" target="13" />
+      <module name="cloud-stream-rabbitmq-consumer8803" target="13" />
+      <module name="cloud-stream-rabbitmq-provider8801" target="13" />
+      <module name="cloud2020" target="13" />
+      <module name="clous-nacos-payment9001" target="13" />
+      <module name="consulorder" target="13" />
+      <module name="consulpayment" target="13" />
+      <module name="demo" target="13" />
+      <module name="demo (1) (com.atguigu.springcloud)" target="13" />
+      <module name="seata-account-service" target="13" />
+      <module name="seata-order-service2001" target="13" />
+      <module name="seata-Storage-Module" target="13" />
+      <module name="server7001" target="13" />
+      <module name="server7002" target="13" />
+      <module name="service7001" target="13" />
+      <module name="zookeeper8004" target="13" />
+      <module name="zookeeperorder80" target="13" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-consumer-order80" options="" />
+      <module name="cloud-eureka-server7001" options="" />
+      <module name="cloud-eureka-server7002" options="-parameters" />
+      <module name="cloud-eureka-server7003" options="" />
+      <module name="demo" options="-parameters" />
+      <module name="server7002" options="" />
+      <module name="service7001" options="-parameters" />
+    </option>
+  </component>
+</project>

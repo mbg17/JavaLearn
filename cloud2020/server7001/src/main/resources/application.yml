@@ -1,0 +1,16 @@
+
+eureka:
+  instance:
+    hostname: service7001
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.cn:7002/eureka/
+  server:
+    #关闭自我保护机制，保证不可用服务被及时踢除
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+server:
+  port: 7001

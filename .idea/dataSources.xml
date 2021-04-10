@@ -5,7 +5,7 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/tongji</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <driver-properties>
         <property name="serverTimezone" value="GMT" />
       </driver-properties>
@@ -16,6 +16,25 @@
       <auto-commit>false</auto-commit>
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@//localhost:1521/root</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="db" uuid="1e41b39d-5fa0-4828-bd39-0a05c2d9e4cf">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>jdbc.properties
+
+D:/JAVA/SSM/heima_ssm_web/src/main/resources/db.properties</remarks>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//localhost:1521/root</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="wetech-admin-server/Hibernate" uuid="cbd1ee42-1245-40d1-828f-d4d5e8994efc">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/wetech_admin</jdbc-url>
     </data-source>
   </component>
 </project>

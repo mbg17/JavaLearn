@@ -16,6 +16,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @Import({JdbcConfig.class,TransactionConfig.class})
 @PropertySource("classpath:jdbc.properties")
-@EnableTransactionManagement
+//@EnableTransactionManagement
 public class SpringConfig {
 }

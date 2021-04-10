@@ -2,48 +2,139 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MybatisTest" />
+        <module name="seata-account-service" />
+        <module name="cloud-config-son" />
         <module name="MySpringMvc" />
-        <module name="ssmTranslate" />
-        <module name="day03_eesy_04adviceType" />
-        <module name="cn.itcast" />
-        <module name="day01_eesy_04mybatis_design" />
-        <module name="Mybatis" />
-        <module name="SpringTest" />
-        <module name="SpringAnncation" />
-        <module name="mySsm" />
-        <module name="CURD" />
-        <module name="SpringTest (1)" />
         <module name="SpringCurd" />
+        <module name="seata-order-service2001" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
+        <module name="cloud-nacos-consumer-9003" />
+        <module name="heima_ssm_services" />
+        <module name="cn.itcast" />
+        <module name="cloud-alibaba-sentinel" />
+        <module name="cloud-provider-hystrix-payment8001" />
+        <module name="SpringTest" />
+        <module name="zookeeperorder80" />
+        <module name="cloud-nacos-consumer" />
+        <module name="consulpayment" />
+        <module name="cloud-config-center" />
+        <module name="seata-Storage-Module" />
+        <module name="clous-nacos-payment9001" />
+        <module name="myStarter-spring-boot-starter" />
+        <module name="wetech-admin-server" />
+        <module name="MavenDao" />
+        <module name="heima_ssm_web" />
+        <module name="CURD" />
+        <module name="heima_ssm_utils" />
+        <module name="ssmTranslate" />
+        <module name="server7001" />
+        <module name="server7002" />
+        <module name="day03_eesy_04adviceType" />
+        <module name="cloud-gateway-9527" />
+        <module name="Heima_Ssm_Servie" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
+        <module name="demo" />
+        <module name="demo (1) (cloud-consumer-order80)" />
+        <module name="zookeeper8004" />
+        <module name="SpringAnncation" />
+        <module name="SpringTest (1)" />
+        <module name="day01_eesy_04mybatis_design" />
+        <module name="cloud-api-common" />
+        <module name="MavenService" />
+        <module name="MybatisTest" />
+        <module name="wetech-admin-ui" />
+        <module name="cloud-provider-payment8001" />
+        <module name="cloud-nacos-config" />
+        <module name="consulorder" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="Cloud-provider-payment8002" />
+        <module name="cloud-feign-order80" />
+        <module name="heima_ssm_dao" />
+        <module name="heima_ssm_domain" />
+        <module name="mySsm" />
+        <module name="cloud-nacos-payment9002" />
+        <module name="MavenWeb" />
+        <module name="Mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-alibaba-sentinel" target="13" />
+      <module name="cloud-api-common" target="13" />
+      <module name="cloud-config-center" target="13" />
+      <module name="cloud-config-son" target="13" />
+      <module name="cloud-consumer-feign-hystrix-order80" target="13" />
+      <module name="cloud-consumer-hystrix-dashboard9001" target="13" />
+      <module name="cloud-feign-order80" target="13" />
+      <module name="cloud-gateway-9527" target="13" />
+      <module name="cloud-nacos-config" target="13" />
+      <module name="cloud-nacos-consumer" target="13" />
+      <module name="cloud-nacos-consumer-9003" target="13" />
+      <module name="cloud-nacos-payment9002" target="13" />
+      <module name="cloud-provider-hystrix-payment8001" target="13" />
+      <module name="cloud-provider-payment8001" target="13" />
+      <module name="Cloud-provider-payment8001" target="13" />
+      <module name="Cloud-provider-payment8002" target="13" />
+      <module name="cloud-stream-rabbitmq-consumer8802" target="13" />
+      <module name="cloud-stream-rabbitmq-consumer8803" target="13" />
+      <module name="cloud-stream-rabbitmq-provider8801" target="13" />
+      <module name="cloud020" target="13" />
+      <module name="cloud2020" target="13" />
+      <module name="clous-nacos-payment9001" target="13" />
       <module name="cn.itcast" target="1.8" />
-      <module name="cn.itcast.heima" target="13" />
-      <module name="com.maven-idea" target="13" />
       <module name="com.maven-test" target="1.8" />
+      <module name="consulorder" target="13" />
+      <module name="consulpayment" target="13" />
       <module name="CURD" target="13" />
       <module name="day01_eesy_04mybatis_design" target="13" />
       <module name="day03_eesy_04adviceType" target="13" />
-      <module name="day04_eesy_07anno_tx_withoutxml" target="13" />
-      <module name="MybaitsTest" target="13" />
-      <module name="Mybatis" target="13" />
-      <module name="MybatisCurd" target="13" />
+      <module name="demo" target="13" />
+      <module name="demo (1) (cloud-consumer-order80)" target="13" />
+      <module name="heima_ssm_dao" target="1.8" />
+      <module name="heima_ssm_domain" target="1.8" />
+      <module name="heima_ssm_services" target="1.8" />
+      <module name="Heima_Ssm_Servie" target="13" />
+      <module name="heima_ssm_utils" target="1.8" />
+      <module name="heima_ssm_web" target="1.8" />
+      <module name="HeimaSsm" target="13" />
+      <module name="MavenDao" target="13" />
+      <module name="MavenParent" target="13" />
+      <module name="MavenService" target="13" />
+      <module name="MavenWeb" target="13" />
       <module name="MybatisTest" target="13" />
-      <module name="MybeatisCurd" target="13" />
       <module name="MySpringMvc" target="13" />
       <module name="mySsm" target="13" />
+      <module name="myStarter-spring-boot-starter" target="13" />
+      <module name="seata-account-service" target="13" />
+      <module name="seata-order-service2001" target="13" />
+      <module name="seata-Storage-Module" target="13" />
+      <module name="server7001" target="13" />
+      <module name="server7002" target="13" />
       <module name="SpringAnncation" target="13" />
-      <module name="springAnnotation" target="13" />
       <module name="SpringCurd" target="13" />
-      <module name="springmvc_day01_01_start" target="13" />
       <module name="SpringTest" target="13" />
       <module name="SpringTest (1)" target="13" />
+      <module name="SSM" target="13" />
       <module name="ssmTranslate" target="13" />
+      <module name="wetech-admin-parent" target="13" />
+      <module name="wetech-admin-server" target="13" />
+      <module name="wetech-admin-ui" target="13" />
+      <module name="zookeeper8004" target="13" />
+      <module name="zookeeperorder80" target="13" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="myStarter-spring-boot-starter" options="-parameters" />
+      <module name="wetech-admin-server" options="-parameters" />
+      <module name="wetech-admin-ui" options="-parameters" />
+    </option>
   </component>
 </project>

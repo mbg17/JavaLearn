@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/CURD/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CURD/src/main/resources" charset="UTF-8" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$USER_HOME$/Desktop/Spring Boot 笔记+课件/wetech-admin-master/wetech-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MavenParent/MavenWeb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MavenParent/MavenWeb/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MySpringMvc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MySpringMvc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MybatisTest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MybatisTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM/heima_ssm_web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM/heima_ssm_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCurd/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCurd/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringTest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/Cloud-provider-payment8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/Cloud-provider-payment8001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/Cloud-provider-payment8002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/Cloud-provider-payment8002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-alibaba-sentinel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-alibaba-sentinel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-api-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-api-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-config-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-config-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-config-son/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-config-son/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-hystrix-dashboard9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-hystrix-dashboard9001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-order80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-consumer-order80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-feign-order80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-feign-order80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-gateway-9527/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-gateway-9527/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer-9003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer-9003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-payment9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-nacos-payment9002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-provider-hystrix-payment8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-provider-hystrix-payment8001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8802/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8802/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8803/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-consumer8803/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-provider8801/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/cloud-stream-rabbitmq-provider8801/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/clous-nacos-payment9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/clous-nacos-payment9001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/consulorder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/consulorder/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/consulpayment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/consulpayment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-Storage-Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-Storage-Module/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-account-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-account-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-order-service2001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/seata-order-service2001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/server7001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/server7001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/server7002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/server7002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/zookeeper8004/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/zookeeper8004/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/zookeeperorder80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud2020/zookeeperorder80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cn.itcast/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cn.itcast/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.javalearn/src/OutputStreamLianXi/a.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mySsm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mySsm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myStarter-spring-boot-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springAnnotation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springAnnotation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssmTranslate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssmTranslate/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
