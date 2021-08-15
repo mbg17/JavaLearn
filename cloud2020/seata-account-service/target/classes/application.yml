@@ -1,0 +1,62 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: SEATA-ACCOUNT-SERVICE
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: "SEATA_GROUP"
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_account?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+feign:
+  hystrix:
+    enabled: false
+logging:
+  level:
+    io:
+      seata: info
+
+seata:
+  tx-service-group: my_test_tx_group
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: "SEATA_GROUP"
+      namespace:
+      username: "nacos"
+      password: "nacos"
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+mybatis-plus:
+  #  mapper-locations: classpath:mybatis/mybatis-config.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-field: active
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      table-underline: true
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+

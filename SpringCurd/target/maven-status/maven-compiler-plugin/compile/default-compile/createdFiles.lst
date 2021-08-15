@@ -1,0 +1,5 @@
+com\springcurd\test\dao\AccountDao.class
+com\springcurd\test\dao\impl\AccountDaoImpl.class
+com\springcurd\test\domain\Account.class
+com\springcurd\test\service\impl\AccountServiceImpl.class
+com\springcurd\test\service\AccountService.class

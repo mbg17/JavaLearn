@@ -186,6 +186,7 @@ public class Solution {
         return dp[m][n];
     }
 
+<<<<<<< HEAD
     public static int nthUglyNumber(int n) {
         if (n <= 6) {
             return n;
@@ -247,6 +248,11 @@ public class Solution {
 //        System.out.println(longestCommonSubsequence("bsbininm"
 //                , "jmjkbkjkv"));
         System.out.println(nthUglyNumber(1690));
+=======
+    public static void main(String[] args) {
+        System.out.println(longestCommonSubsequence("bsbininm"
+                , "jmjkbkjkv"));
+>>>>>>> origin/master
 //        System.out.println(permute(new int[]{1, 2, 3}));
 //        System.out.println(letterCombinations("23"));
 //        System.out.println(isMonotonic(new int[]{1,1,2}));

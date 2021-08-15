@@ -8,7 +8,11 @@ import java.util.Scanner;
 
 public class ThreadEchoServer {
     public static void main(String[] args) throws IOException {
+<<<<<<< HEAD
         try (var s = new ServerSocket(9001);) {
+=======
+        try (var s = new ServerSocket(8189);) {
+>>>>>>> origin/master
             // 计数器
             int i = 1;
             // 循环接受请求
@@ -47,7 +51,11 @@ class ThreadedEchoHandler implements Runnable {
                 out.println("hello! Enter Bye to Exit!");
                 boolean flag = false;
                 // 等待用户输入
+<<<<<<< HEAD
                 while (!flag) {
+=======
+                while (!flag && scanner.hasNextLine()) {
+>>>>>>> origin/master
                     String s = scanner.nextLine();
                     out.println("Your message" + s);
                     if (s.trim().equals("Bye")) {
