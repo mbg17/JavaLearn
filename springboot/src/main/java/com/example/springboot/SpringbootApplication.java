@@ -39,7 +39,7 @@ public class SpringbootApplication {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("User RESTful APIs")
+                .title("用户swagger页面")
                 .build();
     }
 }

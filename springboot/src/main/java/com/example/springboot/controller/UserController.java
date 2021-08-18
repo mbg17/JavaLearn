@@ -2,6 +2,7 @@ package com.example.springboot.controller;
 
 import com.example.springboot.domain.User;
 import com.example.springboot.service.UserService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@Api(tags = {"用户接口"})
 public class UserController {
     @Resource
     private UserService userService;
