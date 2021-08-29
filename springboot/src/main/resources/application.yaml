@@ -8,3 +8,29 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://127.0.0.1:3306/login?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+
+mybatis-plus:
+  mapper-locations: classpath:mybatis/mappers/*.xml
+  typeAliasesPackage: com.example.springboot.domain
+  #实体扫描，多个package用逗号或者分号分隔
+  global-config:
+    banner: false
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      #数据库大写下划线转换
+      capital-mode: true
+      #逻辑删除配置
+      logic-delete-field: is_delete
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      table-underline: true
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+logging:
+  level:
+    com.example.springboot.dao: DEBUG

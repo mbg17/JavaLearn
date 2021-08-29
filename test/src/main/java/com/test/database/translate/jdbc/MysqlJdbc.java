@@ -12,7 +12,6 @@ public class MysqlJdbc {
         String password = "root";
         // 建立连接 执行sql
         try (Connection connection = DriverManager.getConnection(url, username, password);
-<<<<<<< HEAD
              Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);) {
             ResultSet resultSet = statement.executeQuery("select * from account");
             while (resultSet.next()) {
@@ -22,15 +21,6 @@ public class MysqlJdbc {
                 resultSet.updateInt(3, resultSet.getInt(3) + 200);
                 resultSet.updateRow();
             }
-=======
-             Statement statement = connection.createStatement();) {
-            ResultSet resultSet = statement.executeQuery("select * from account");
-           while (resultSet.next()){
-               System.out.println(resultSet.getInt(1)+":"
-                       +resultSet.getString(2)+":"
-                       +resultSet.getInt(3));
-           }
->>>>>>> origin/master
         }
     }
 }
