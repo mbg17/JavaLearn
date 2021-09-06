@@ -8,6 +8,13 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://127.0.0.1:3306/login?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+  redis:
+    database: 0
+    password: root
+    host: localhost
+    timeout: 36000
+    port: 6379
+
 
 mybatis-plus:
   mapper-locations: classpath:mybatis/mappers/*.xml
@@ -34,3 +41,8 @@ mybatis-plus:
 logging:
   level:
     com.example.springboot.dao: DEBUG
+
+timeset:
+  config:
+    version_all: 30
+    grade_all: 60

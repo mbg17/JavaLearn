@@ -30,19 +30,19 @@ public class VersionController {
 
     @ApiOperation(value = "添加版本", notes = "添加版本", httpMethod = "POST")
     @PostMapping("/addVersion")
-    public ResponseData addVersion(@RequestBody VersionDto versionDto){
+    public ResponseData addVersion(@RequestBody VersionDto versionDto) {
         return versionService.addVersion(versionDto);
     }
 
     @ApiOperation(value = "更新版本", notes = "添加版本", httpMethod = "PUT")
     @PutMapping("/updateVersion")
-    public ResponseData updateVersion(@RequestBody VersionDto versionDto){
+    public ResponseData updateVersion(@RequestBody VersionDto versionDto) {
         return versionService.updateVersion(versionDto);
     }
 
     @ApiOperation(value = "删除版本", notes = "删除版本", httpMethod = "DELETE")
     @DeleteMapping("/deleteVersion/{id}")
-    public ResponseData deleteVersion(@PathVariable("id") Integer id){
+    public ResponseData deleteVersion(@PathVariable("id") Integer id) {
         return versionService.deleteVersion(id);
     }
 }

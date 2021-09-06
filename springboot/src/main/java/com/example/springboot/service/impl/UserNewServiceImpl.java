@@ -19,18 +19,19 @@ import javax.annotation.Resource;
 public class UserNewServiceImpl implements UserNewService {
     @Resource
     private UserNewDao userNewDao;
+
     @Override
     public UserNew login(UserLoginDto userLoginDto) {
         QueryWrapper<UserNew> userNewQueryWrapper = new QueryWrapper<>();
-        userNewQueryWrapper.eq("username",userLoginDto.getUsername());
-        userNewQueryWrapper.eq("password",userLoginDto.getPassword());
+        userNewQueryWrapper.eq("username", userLoginDto.getUsername());
+        userNewQueryWrapper.eq("password", userLoginDto.getPassword());
         return userNewDao.selectOne(userNewQueryWrapper);
     }
 
     @Override
     public ResponseData register(UserInputDto userInputDto) {
         UserNew userNew = new UserNew();
-        BeanUtils.copyProperties(userInputDto,userNew);
+        BeanUtils.copyProperties(userInputDto, userNew);
         userNewDao.insert(userNew);
         return ResponseUtil.success("注册成功");
     }

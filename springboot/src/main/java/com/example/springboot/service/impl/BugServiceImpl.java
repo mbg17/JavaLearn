@@ -27,7 +27,7 @@ public class BugServiceImpl implements BugService {
     @Override
     public ResponseData addBug(BugInputDto bugInputDto) {
         Bug bug = new Bug();
-        BeanUtils.copyProperties(bugInputDto,bug);
+        BeanUtils.copyProperties(bugInputDto, bug);
         bugDao.insert(bug);
         for (Integer version : bugInputDto.getVersions()) {
             bugDao.addBugVersions(bug.getId(), version);
@@ -50,7 +50,7 @@ public class BugServiceImpl implements BugService {
     @Override
     public ResponseData updateBug(BugInputDto bugInputDto) {
         Bug bug = new Bug();
-        BeanUtils.copyProperties(bugInputDto,bug);
+        BeanUtils.copyProperties(bugInputDto, bug);
         bugDao.updateById(bug);
         bugDao.deleteVersions(bug.getId());
         for (Integer version : bugInputDto.getVersions()) {

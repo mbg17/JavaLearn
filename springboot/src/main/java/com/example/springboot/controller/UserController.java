@@ -63,9 +63,9 @@ public class UserController {
     @ApiOperation(value = "登录用户（老师提供的）", notes = "登录用户（老师提供的）", httpMethod = "POST")
     @PostMapping("/login")
     public ResponseData login(@RequestBody UserLoginDto userLoginDto) {
-        UserNew userNew =  userNewService.login(userLoginDto);
-        if(userNew!=null){
-            httpSession.setAttribute("userId",userNew.getId());
+        UserNew userNew = userNewService.login(userLoginDto);
+        if (userNew != null) {
+            httpSession.setAttribute("userId", userNew.getId());
             return ResponseUtil.success(true);
         }
         return ResponseUtil.fail();
@@ -74,6 +74,6 @@ public class UserController {
     @ApiOperation(value = "注册用户（老师提供的）", notes = "注册用户（老师提供的）", httpMethod = "POST")
     @PostMapping("/register")
     public ResponseData register(@RequestBody UserInputDto userInputDto) {
-        return  userNewService.register(userInputDto);
+        return userNewService.register(userInputDto);
     }
 }

@@ -2,8 +2,10 @@ package com.example.springboot.domain;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class ResponseData {
+public class ResponseData implements Serializable {
     private Integer code;
     private Object data;
     private String msg;

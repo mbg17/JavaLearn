@@ -41,9 +41,9 @@ public class ServiceAop {
                 ArrayList<Map.Entry<?, ?>> list = new ArrayList<>(((HashMap) invoke).entrySet());
                 response = list.size() > 0 ? "Map<" + list.get(0).getKey().getClass().getName() + "," + list.get(0).getValue().getClass().getName() + ">" + list.size() : "null";
             } else {
-                response = invoke == null ? "null" : invoke.toString().length()>400?invoke.getClass().getPackageName():invoke.toString();
+                response = invoke == null ? "null" : invoke.toString().length() > 400 ? invoke.getClass().getPackageName() : invoke.toString();
             }
-            Log log = new Log(pjp.getSignature().getName(), Arrays.toString(args).length()>100?args.getClass().getPackageName():Arrays.toString(args), response, new Date(System.currentTimeMillis()));
+            Log log = new Log(pjp.getSignature().getName(), Arrays.toString(args).length() > 100 ? args.getClass().getPackageName() : Arrays.toString(args), response, new Date(System.currentTimeMillis()));
             logDao.insert(log);
         }
         return invoke;

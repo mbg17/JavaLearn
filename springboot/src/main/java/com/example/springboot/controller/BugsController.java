@@ -18,31 +18,31 @@ public class BugsController {
 
     @ApiOperation(value = "获取所有BUG", notes = "获取所有BUG", httpMethod = "GET")
     @GetMapping("/getBugs")
-    public ResponseData getBugs(){
+    public ResponseData getBugs() {
         return bugService.getBugs();
     }
 
     @ApiOperation(value = "获取指定BUG", notes = "获取指定BUG", httpMethod = "GET")
     @GetMapping("/getBugs/{id}")
-    public ResponseData getBugById(@PathVariable("id") Integer id){
+    public ResponseData getBugById(@PathVariable("id") Integer id) {
         return bugService.getBugById(id);
     }
 
     @ApiOperation(value = "添加bug", notes = "添加bug", httpMethod = "POST")
     @PostMapping("/addBug")
-    public ResponseData addBug(@RequestBody BugInputDto bugInputDto){
+    public ResponseData addBug(@RequestBody BugInputDto bugInputDto) {
         return bugService.addBug(bugInputDto);
     }
 
     @ApiOperation(value = "删除bug", notes = "删除bug", httpMethod = "DELETE")
     @DeleteMapping("/deleteBug/{id}")
-    public ResponseData deleteBug(@PathVariable("id") Integer id){
+    public ResponseData deleteBug(@PathVariable("id") Integer id) {
         return bugService.deleteBug(id);
     }
 
     @ApiOperation(value = "修改bug", notes = "修改bug", httpMethod = "PUT")
     @PutMapping("/updateBug")
-    public ResponseData updateBug(@RequestBody BugInputDto bugInputDto){
+    public ResponseData updateBug(@RequestBody BugInputDto bugInputDto) {
         return bugService.updateBug(bugInputDto);
     }
 

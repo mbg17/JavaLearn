@@ -6,7 +6,7 @@ import com.example.springboot.dto.UserInputDto;
 import com.example.springboot.dto.UserLoginDto;
 
 public interface UserNewService {
-    UserNew login(UserLoginDto userLoginDto );
+    UserNew login(UserLoginDto userLoginDto);
 
     ResponseData register(UserInputDto userInputDto);
 }

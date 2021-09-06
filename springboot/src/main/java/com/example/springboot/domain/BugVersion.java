@@ -4,29 +4,30 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
- * 
  * @TableName bug_version
  */
-@TableName(value ="bug_version")
+@TableName(value = "bug_version")
 @Data
 public class BugVersion implements Serializable {
     /**
-     * 
+     *
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     *
      */
     private Integer bugId;
 
     /**
-     * 
+     *
      */
     private Integer versionId;
 
@@ -46,8 +47,8 @@ public class BugVersion implements Serializable {
         }
         BugVersion other = (BugVersion) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getBugId() == null ? other.getBugId() == null : this.getBugId().equals(other.getBugId()))
-            && (this.getVersionId() == null ? other.getVersionId() == null : this.getVersionId().equals(other.getVersionId()));
+                && (this.getBugId() == null ? other.getBugId() == null : this.getBugId().equals(other.getBugId()))
+                && (this.getVersionId() == null ? other.getVersionId() == null : this.getVersionId().equals(other.getVersionId()));
     }
 
     @Override
