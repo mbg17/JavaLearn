@@ -1,7 +1,7 @@
 package com.example.springbootopenfeign.dto;
 
-import com.example.springboot.domain.Grade;
-import com.example.springboot.domain.Version;
+import com.example.springbootopenfeign.domain.Grade;
+import com.example.springbootopenfeign.domain.Version;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 

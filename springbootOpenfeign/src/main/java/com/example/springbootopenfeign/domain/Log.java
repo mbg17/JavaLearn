@@ -1,7 +1,5 @@
 package com.example.springbootopenfeign.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,7 +9,6 @@ import java.util.Date;
 @ApiModel(value = "com.examples.springboot.daomain.User", description = "用户实体类")
 public class Log {
     @ApiModelProperty(value = "ID")
-    @TableId(type = IdType.AUTO)
     private Integer id;
     @ApiModelProperty(value = "方法名")
     private String method;

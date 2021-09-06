@@ -1,6 +1,5 @@
 package com.example.springbootopenfeign.domain;
 
-import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
@@ -10,13 +9,13 @@ import java.util.Date;
 /**
  * @TableName grade
  */
-@TableName(value = "grade")
+
 @Data
 public class Grade implements Serializable {
     /**
      *
      */
-    @TableId(type = IdType.AUTO)
+
     private Integer id;
 
     /**
@@ -33,31 +32,26 @@ public class Grade implements Serializable {
      *
      */
     @JsonIgnore
-    @TableField(fill = FieldFill.INSERT)
     private Integer createBy;
 
     /**
      *
      */
     @JsonIgnore
-    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      *
      */
     @JsonIgnore
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Integer updateBy;
 
     /**
      *
      */
     @JsonIgnore
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
-    @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
     @Override

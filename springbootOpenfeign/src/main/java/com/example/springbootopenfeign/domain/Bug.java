@@ -1,6 +1,5 @@
 package com.example.springbootopenfeign.domain;
 
-import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,13 +8,11 @@ import java.util.Date;
 /**
  * @TableName bug
  */
-@TableName(value = "bug")
 @Data
 public class Bug extends BaseDomain implements Serializable {
     /**
      *
      */
-    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -41,29 +38,24 @@ public class Bug extends BaseDomain implements Serializable {
     /**
      *
      */
-    @TableField(fill = FieldFill.INSERT)
     private Integer createBy;
 
     /**
      *
      */
-    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      *
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Integer updateBy;
 
     /**
      *
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
 
-    @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
     @Override
