@@ -3,10 +3,7 @@ package com.example.springbootopenfeign.service;
 import com.example.springbootopenfeign.domain.ResponseData;
 import com.example.springbootopenfeign.dto.BugInputDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "bugs",url = "localhost:8000")
 public interface BugService {
@@ -14,14 +11,14 @@ public interface BugService {
     ResponseData getBugs();
 
     @PostMapping("/addBug")
-    ResponseData addBug(BugInputDto bugInputDto);
+    ResponseData addBug(@RequestBody BugInputDto bugInputDto);
 
     @GetMapping("/getBugs/{id}")
-    ResponseData getBugById(Integer id);
+    ResponseData getBugById(@PathVariable("id")Integer id);
 
     @DeleteMapping("/deleteBug/{id}")
-    ResponseData deleteBug(Integer id);
+    ResponseData deleteBug(@PathVariable("id") Integer id);
 
     @PutMapping("/updateBug")
-    ResponseData updateBug(BugInputDto bugInputDto);
+    ResponseData updateBug(@RequestBody BugInputDto bugInputDto);
 }

@@ -33,6 +33,6 @@ public class UserNewServiceImpl implements UserNewService {
         UserNew userNew = new UserNew();
         BeanUtils.copyProperties(userInputDto, userNew);
         userNewDao.insert(userNew);
-        return ResponseUtil.success("注册成功");
+        return ResponseUtil.successMsg(true, "注册成功");
     }
 }

@@ -47,7 +47,7 @@ public class VersionServiceImpl implements VersionService {
         versionDao.insert(version);
         Set<String> keys = redisTemplate.keys("version_all:" + "*");
         redisTemplate.delete(keys);
-        return ResponseUtil.success(version);
+        return ResponseUtil.successMsg(version, "添加版本成功");
     }
 
     @Override
@@ -57,14 +57,14 @@ public class VersionServiceImpl implements VersionService {
         versionDao.updateById(version);
         Set<String> keys = redisTemplate.keys("version_all:" + "*");
         redisTemplate.delete(keys);
-        return ResponseUtil.success(version);
+        return ResponseUtil.successMsg(version, "删除版本成功");
     }
 
     @Override
     public ResponseData deleteVersion(Integer id) {
         Set<String> keys = redisTemplate.keys("version_all:" + "*");
         redisTemplate.delete(keys);
-        return ResponseUtil.success(versionDao.deleteById(id));
+        return ResponseUtil.successMsg(versionDao.deleteById(id), "删除版本成功");
     }
 
     @Override

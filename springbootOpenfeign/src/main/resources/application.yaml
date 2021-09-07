@@ -1,2 +1,2 @@
-feign:
-
+server:
+  port: 9000

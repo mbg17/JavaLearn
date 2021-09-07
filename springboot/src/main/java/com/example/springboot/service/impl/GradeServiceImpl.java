@@ -40,7 +40,7 @@ public class GradeServiceImpl implements GradeService {
         Grade grade = new Grade();
         BeanUtils.copyProperties(gradeInputDto, grade);
         gradeDao.insert(grade);
-        return ResponseUtil.success(grade);
+        return ResponseUtil.successMsg(grade, "添加等级成功");
     }
 
     @CacheEvict(allEntries = true)
@@ -55,6 +55,6 @@ public class GradeServiceImpl implements GradeService {
         Grade grade = new Grade();
         BeanUtils.copyProperties(gradeInputDto, grade);
         gradeDao.updateById(grade);
-        return ResponseUtil.success(grade);
+        return ResponseUtil.successMsg(grade, "更新数据成功");
     }
 }

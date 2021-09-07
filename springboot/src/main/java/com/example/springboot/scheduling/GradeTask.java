@@ -19,7 +19,7 @@ public class GradeTask {
     @Resource
     private GradeDao gradeDao;
 
-    @Scheduled(cron = "0 0 0-8 * * ?")
+    @Scheduled(cron = "0 0 0/8 * * ? ")
     public void execute() {
         Set<String> keys = redisTemplate.keys("grade_all:*");
         redisTemplate.delete(keys);

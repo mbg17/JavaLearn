@@ -44,7 +44,7 @@ public class BugServiceImpl implements BugService {
     public ResponseData deleteBug(Integer id) {
         bugDao.deleteById(id);
         bugDao.deleteVersions(id);
-        return ResponseUtil.success(true);
+        return ResponseUtil.successMsg(true, "删除数据成功");
     }
 
     @Override
