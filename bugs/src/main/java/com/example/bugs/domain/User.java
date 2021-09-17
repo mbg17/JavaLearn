@@ -16,9 +16,13 @@ public class User {
     private String username;
     private String password;
     private String nickname;
+    private String roles;
+    @TableField(fill = FieldFill.INSERT)
     private String createBy;
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private String modifyBy;
-    @TableField(fill = FieldFill.UPDATE)
-    private String updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
 }

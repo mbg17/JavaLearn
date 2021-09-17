@@ -243,13 +243,86 @@ public class Solution {
         return ans;
     }
 
+    private int ans = 1;
+    private int g_n;
+
+    public int findIntegers(int n) {
+        this.g_n = n;
+        dfs(1);
+        return ans;
+    }
+
+    private void dfs(int i) {
+        if (i > g_n) {
+            return;
+        }
+        ans++;
+        if ((i & 1) == 1) {
+            dfs(i << 1);
+        } else {
+            dfs(i << 1);
+            dfs((i << 1) + 1);
+        }
+    }
+
+    public boolean checkValidString(String s) {
+        Stack<Integer> stars = new Stack<>();
+        Stack<Integer> left = new Stack<>();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == ' ') {
+                continue;
+            }
+            if (chars[i] == '(') {
+                left.push(i);
+            } else if (chars[i] == '*') {
+                stars.push(i);
+            } else {
+                if (!left.isEmpty()) {
+                    left.pop();
+                } else if (!stars.isEmpty()) {
+                    stars.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        while (!left.isEmpty() && !stars.isEmpty()) {
+            Integer l = left.pop();
+            Integer star = stars.pop();
+            if (star < l) {
+                return false;
+            }
+        }
+        return left.isEmpty();
+    }
+    int test() {
+        try {
+            return func1();
+        } finally {
+            return func2();
+        }
+    }
+
+    private int func2() {
+        System.out.println("func2");
+        return 2;
+    }
+
+    private int func1() {
+        System.out.println("func1");
+        return 1;
+    }
+
+
     public static void main(String[] args) {
 //        System.out.println(longestCommonSubsequence("bsbininm"
 //                , "jmjkbkjkv"));
-        System.out.println(nthUglyNumber(1690));
+//        System.out.println(nthUglyNumber(1690));
 //        System.out.println(permute(new int[]{1, 2, 3}));
 //        System.out.println(letterCombinations("23"));
 //        System.out.println(isMonotonic(new int[]{1,1,2}));
 //        System.out.println(longestSubstring("acaabb", 3));
+        System.out.println(new Solution().test());
     }
 }

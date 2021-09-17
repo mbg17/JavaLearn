@@ -3,6 +3,7 @@ package com.example.bugs.controller;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.bugs.annocation.HasRole;
 import com.example.bugs.common.Result;
 import com.example.bugs.dao.VersionMapper;
 import com.example.bugs.domain.Version;
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.HashMap;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@HasRole(roles = "staff")
 public class VersionController {
 
     @Resource

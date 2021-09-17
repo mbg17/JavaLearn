@@ -21,8 +21,9 @@ public class Lists {
     private String version;
     private String people;
     private String createBy;
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     private String modifyBy;
-    @TableField(fill = FieldFill.UPDATE)
-    private String updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
 }

@@ -16,8 +16,9 @@ public class Version {
     private String version;
     private String detail;
     private String createBy;
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     private String modifyBy;
-    @TableField(fill = FieldFill.UPDATE)
-    private String updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
 }

@@ -7,6 +7,7 @@
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="username" column="username" jdbcType="VARCHAR"/>
         <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="roles" column="roles" jdbcType="VARCHAR"/>
         <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
         <result property="modifyBy" column="modify_by" jdbcType="VARCHAR"/>
@@ -15,17 +16,16 @@
 
     <sql id="Base_Column_List">
         id
-        ,username,password,
+        ,username,password,roles,
         create_by,
         create_time,modify_by,update_time
     </sql>
 
-    <update id="modifyVersion" parameterType="list">
+    <update id="modifyUser" parameterType="user">
         update user
         set username  = #{username},
             password  = #{password},
-            modify_by = #{nickname},
-            update_time = CURRENT_TIMESTAMP
+            modify_by = #{nickname}
         where id = #{id}
     </update>
 </mapper>

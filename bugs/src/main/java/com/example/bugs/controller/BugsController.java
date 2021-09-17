@@ -2,6 +2,7 @@ package com.example.bugs.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.bugs.annocation.HasRole;
 import com.example.bugs.common.Result;
 import com.example.bugs.dao.ListMapper;
 import com.example.bugs.domain.Lists;
@@ -12,7 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@HasRole(roles = "staff")
 public class BugsController {
     @Resource
     private ListMapper listMapper;

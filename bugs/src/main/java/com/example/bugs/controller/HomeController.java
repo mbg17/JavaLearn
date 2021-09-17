@@ -1,5 +1,6 @@
 package com.example.bugs.controller;
 
+import com.example.bugs.annocation.HasRole;
 import com.example.bugs.common.Result;
 import com.example.bugs.dao.ListMapper;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -10,7 +11,7 @@ import javax.annotation.Resource;
 import java.util.*;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@HasRole(roles = "staff")
 public class HomeController {
     @Resource
     private ListMapper listMapper;

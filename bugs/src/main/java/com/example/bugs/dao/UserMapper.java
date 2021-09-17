@@ -9,5 +9,5 @@ import java.util.HashMap;
 
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
-    void modifyVersion(HashMap<String, Object> hashMap);
+    void modifyUser(User user);
 }

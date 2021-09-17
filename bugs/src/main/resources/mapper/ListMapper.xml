@@ -49,17 +49,20 @@
         select count(1) as value, u.nickname as name
         from user u
                  inner join list l on u.nickname = l.create_by
-        group BY l.create_by order by value asc
+        group BY l.create_by
+        order by value asc
     </select>
 
     <select id="createBugs" resultType="hashmap">
         select count(1) as value, u.nickname as name
         from user u
                  inner join list l on u.nickname = l.people
-        group BY l.people order by value asc
+        group BY l.people
+        order by value asc
     </select>
 
     <select id="hasVersion" resultType="string">
-        select version from list
+        select version
+        from list
     </select>
 </mapper>

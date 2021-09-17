@@ -1,27 +1,34 @@
 package com.example.bugs.common;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import com.example.bugs.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 @Slf4j
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {
 
+    @Resource
+    private HttpSession httpSession;
+
     @Override
     public void insertFill(MetaObject metaObject) {
-        log.info("start insert fill ....");
-        this.strictInsertFill(metaObject, "createTime", () -> LocalDateTime.now(), LocalDateTime.class);
-        // 起始版本 3.3.3(推荐)
+        Date date = new Date();
+        User user = (User) httpSession.getAttribute("user");
+        this.fillStrategy(metaObject, "createBy", user==null?"":user.getNickname());
+        this.fillStrategy(metaObject, "modifyBy", user==null?"":user.getNickname());
+        this.fillStrategy(metaObject, "createTime", date);
+        this.fillStrategy(metaObject, "updateTime", date);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        log.info("start update fill ....");
-        this.strictUpdateFill(metaObject, "updateTime", () -> LocalDateTime.now(), LocalDateTime.class);
-        // 起始版本 3.3.3(推荐)
+        this.fillStrategy(metaObject, "updateTime", new Date());
     }
 }
