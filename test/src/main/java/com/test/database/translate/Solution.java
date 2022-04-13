@@ -296,6 +296,7 @@ public class Solution {
         }
         return left.isEmpty();
     }
+
     int test() {
         try {
             return func1();
@@ -314,15 +315,210 @@ public class Solution {
         return 1;
     }
 
+    //    解题思路: 有四个洗衣机，装的衣服数为[0, 0, 11, 5]，最终的状态会变为[4, 4, 4, 4]，那么我们将二者做差，得到*[-4, -4, 7, 1]，这里负数表示当前洗衣机还需要的衣服数
+//    ，正数表示当前洗衣机多余的衣服数。我们要做的是*要将这个差值数组每一项都变为0，对于第一个洗衣机来说，需要四件衣服可以从第二个洗衣机获得，那么就可以 把-4移给二号洗衣机，那么差值数组变为[0, -8, 7, 1]
+//    ，此时二号洗衣机需要八件衣服，那么至少需要移动8次。然后二号洗衣机把这八件衣服从三号洗衣机处获得，那么差值数组变为[0, 0, -1, 1]，
+//    此时三号洗衣机还缺1件，就从四号洗衣机处获得，此时差值数组成功变为了[0, 0, 0, 0]，成功。那么移动的最大次数就是差值 数组中出现的绝对值最大的数字，8次
+    public int findMinMoves(int[] machines) {
+        int all = Arrays.stream(machines).sum();
+        int mod = all % machines.length;
+        if (mod != 0) {
+            return -1;
+        }
+        int div = all / machines.length;
+        int[] ints = new int[machines.length];
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] = machines[i] - div;
+        }
+        int ans = Integer.MIN_VALUE;
+        for (int i = 0; i < ints.length - 1; i++) {
+            ans = Math.max(ans, Math.abs(ints[i]));
+            ans = Math.max(ans, ints[i + 1]);
+            ints[i + 1] += ints[i];
+        }
+        return Math.max(ans, ints[ints.length - 1]);
+    }
+
+    public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {
+        int a = (ay2 - ay1) * (ax2 - ax1);
+        int b = (by2 - by1) * (bx2 - bx1);
+        int x1 = 0;
+        int x2 = 0;
+        int y1 = 0;
+        int y2 = 0;
+        if ((by2 < ay2 && by2 > ay1) || ay2 == by2) {
+            y1 = by2;
+        }
+        if ((ay2 < by2 && ay2 > by1) || ay2 == by2) {
+            y1 = ay2;
+        }
+        if ((by1 > ay1 && by1 < ay2) || ay1 == by1) {
+            y2 = by1;
+        }
+        if ((ay1 > by1 && ay1 < by2) || ay1 == by1) {
+            y2 = ay1;
+        }
+        if ((bx1 > ax1 && bx1 < ax2) || bx1 == ax1) {
+            x1 = bx1;
+        }
+        if ((ax1 > bx1 && ax1 < bx2) || bx1 == ax1) {
+            x1 = ax1;
+        }
+        if ((bx2 < ax2 && bx2 > ax1) || bx2 == ax2) {
+            x2 = bx2;
+        }
+        if ((ax2 < bx2 && ax2 > bx1) || ax2 == bx2) {
+            x2 = ax2;
+        }
+        return a + b - (y1 - y2) * (x2 - x1);
+    }
+
+    public String destCity(List<List<String>> paths) {
+        HashMap<String, String> stringStringHashMap = new HashMap<>();
+        HashSet<String> strings = new HashSet<>();
+        for (List<String> path : paths) {
+            stringStringHashMap.put(path.get(0), path.get(1));
+            strings.add(path.get(0));
+            strings.add(path.get(1));
+        }
+        String ans = "";
+        for (String string : strings) {
+            String s = stringStringHashMap.get(string);
+            if (s == null) {
+                ans = string;
+                break;
+            }
+        }
+        return ans;
+    }
+
+    public String fractionToDecimal(int numerator, int denominator) {
+        StringBuffer stringBuffer = new StringBuffer();
+        long a = numerator;
+        long b = denominator;
+        if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
+            stringBuffer.append("-");
+        }
+        a = Math.abs(a);
+        b = Math.abs(b);
+        long i = a / b;
+        stringBuffer.append(i);
+        if (a % b == 0) {
+            return stringBuffer.toString();
+        }
+        stringBuffer.append(".");
+        HashMap<Long, Integer> longIntegerHashMap = new HashMap<>();
+        while ((a = (a % b) * 10) > 0 && !longIntegerHashMap.containsKey(a)) {
+            longIntegerHashMap.put(a, stringBuffer.length());
+            stringBuffer.append(a / b);
+        }
+        if (a == 0) {
+            return stringBuffer.toString();
+        }
+        return stringBuffer.insert(longIntegerHashMap.get(a).intValue(), '(').append(')').toString();
+    }
+
+    public int thirdMax(int[] nums) {
+        Arrays.sort(nums);
+        if (nums.length < 3) {
+            return nums[nums.length - 1];
+        }
+        int ans = nums.length - 1;
+        int num = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (i == nums.length || nums[i] == nums[i + 1]) {
+                continue;
+            } else {
+                num++;
+                ans = i;
+            }
+            if (num == 3) {
+                break;
+            }
+        }
+        return num == 3 ? nums[ans] : nums[nums.length - 1];
+    }
+
+    public int countSegments(String s) {
+        char[] chars = s.toCharArray();
+        int ans = 0;
+        boolean flag = false;
+        for (char aChar : chars) {
+            if (aChar == ' ') {
+                if (flag) {
+                    flag = false;
+                }
+                continue;
+            }
+            if (!flag) {
+                ans++;
+                flag = true;
+            }
+        }
+        return ans;
+    }
+
+    public static String simplifyPath(String path) {
+        System.out.println(1);
+        String[] split = path.split("/");
+        String ans = new String();
+        Stack<String> strings = new Stack<>();
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i = 0; i < split.length; i++) {
+            if (".".equals(split[i]) || "".equals(split[i])) {
+                continue;
+            } else if ("..".equals(split[i])) {
+                if (!strings.isEmpty()) {
+                    strings.pop();
+                }
+            } else {
+                strings.push(split[i]);
+            }
+        }
+        while (!strings.isEmpty()) {
+            String pop = strings.pop();
+            ans = "/" + pop + ans;
+        }
+        return ans.equals("") ? "/" : ans;
+    }
+
+    public boolean increasingTriplet(int[] nums) {
+        int first = Integer.MAX_VALUE;
+        int second = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < first) {
+                first = nums[i];
+            } else if (first < nums[i]) {
+                second = nums[i];
+            } else if (nums[i] > second) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int dominantIndex(int[] nums) {
+        if (nums.length == 1) {
+            return 0;
+        }
+        int first = -1;
+        int second = -1;
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (Math.max(second, nums[i]) > second) {
+                first = second;
+                second = nums[i];
+                max = i;
+            } else if (nums[i] < second && nums[i] > first) {
+                first = nums[i];
+            }
+        }
+        return (first==0) && second / first >= 2 ? max : -1;
+    }
 
     public static void main(String[] args) {
-//        System.out.println(longestCommonSubsequence("bsbininm"
-//                , "jmjkbkjkv"));
-//        System.out.println(nthUglyNumber(1690));
-//        System.out.println(permute(new int[]{1, 2, 3}));
-//        System.out.println(letterCombinations("23"));
-//        System.out.println(isMonotonic(new int[]{1,1,2}));
-//        System.out.println(longestSubstring("acaabb", 3));
-        System.out.println(new Solution().test());
+        System.out.println(simplifyPath("/a//b////c/d//././/.."));
+        String[] split = "111".split("\\.");
+        System.out.println(split.length);
     }
 }
